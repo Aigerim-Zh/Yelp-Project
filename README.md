@@ -10,11 +10,11 @@ We selected this topic because building this model can inform investors or busin
 In this group project, responsibilities were shared more or less equally among all team members. Each team member participated in every part of the project. However, some had their unique responsibilities as well. 
 
 | Member | Responsibilities                            |
-----------------------------------------------------
-| [Aigerim Zhanibekova]() | Manage the GitHub repository and README write-up; Data Cleaning; Machine Learning |
-| [Ana Bisker]() | General Project Manager; |
-| [Hristo Bustamante]() |  |
-| [Leila Corvera Fontela]() | |
+| -------------| ---------------------------------------  |
+| [Aigerim Zhanibekova](https://github.com/Aigerim-Zh) | Manage the GitHub repository and README write-up; Data Cleaning; Machine Learning |
+| [Ana Bisker](https://github.com/anaorenstein) | General Project Manager; Machine Learning; |
+| [Hristo Bustamante]() | Machine Learning |
+| [Leila Corvera Fontela]() | Machine Learning|
 | [Ngoc Chau]() | Conversion of JSON into CSV; |
 
 Team members had regular meetings over Zoom and always stayed in touch through IMessages and Slack chats. Some intermediate and brainstorming files were shared through Google Drive. 
