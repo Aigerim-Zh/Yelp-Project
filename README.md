@@ -10,12 +10,14 @@ Success is measured through ratings (from 1 to 5 stars) in the following manner:
 - 1 to 1.9 - poor
 
 We gathered data from Yelp on the top restaurant attributes associated with higher or lower ratings. Based on all possible combinations of these attributes, the model will make rating predictions. 
+
 ---------------------------------------------------------------------------------------
 
 ## Motivation 
 The restaurant industry took a big hit from the recent pandemic. Now, more than ever, restaurant owners can greatly benefit from the insights presented by what consumers currently value the most in the food industry. In accessing data on the top rated attributes, restaurant owners and investors can learn how to best appeal to the public in ever-changing times. 
 
 The predicting model developed in this project can be applied to other regions and used by various stakeholders.
+
 ---------------------------------------------------------------------------------------
 
 ## Team Members and Communication Protocols
@@ -30,6 +32,7 @@ In this group project, responsibilities were shared equally among all team membe
 | [Ngoc Chau](https://github.com/Ngoclchau) | Data Extraction; Data Cleaning; ERD diagram|
 
 Team members had regular meetings over Zoom and always stayed in touch through IMessages and Slack chats. Some intermediate and brainstorming files were shared through Google Drive. 
+
 ---------------------------------------------------------------------------------------
 
 ## Source of the Data
@@ -37,6 +40,7 @@ The data used in this project is [Yelp's businesses, reviews, and users subset d
     - The original raw data contains business information across 8 metropolitan areas in the USA and Canada. For this project, we will focus on the USA and X states. 
     - The data was last updated on February 16, 2021.
     - There are 150,346 records in total, which will be filtered to only restaraunts resulting in [X] records. 
+
 ---------------------------------------------------------------------------------------
 
 ## Questions We Hope to Answer with the Data 
