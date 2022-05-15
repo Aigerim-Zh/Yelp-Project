@@ -173,7 +173,7 @@ As our **Deliverable** for this Segment, we are currently selecting, at this sta
 
 The code can be found here: 
 
-[Linear Regression](Mult_Lin_Reg_test_model.ipynb)
+[Linear Regression](Code/Mult_Lin_Reg_test_model.ipynb)
 
 Going forward, as we progress and deepen the data analysis and processing of our project, we intend to test our analysis and metrics to select the best predictive model, to minimize error and loss while fitting our algorithm, and to optimize the function of our model.
 
