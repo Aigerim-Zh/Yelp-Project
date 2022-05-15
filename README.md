@@ -100,21 +100,21 @@ The data used in this project is [Yelp's businesses, reviews, and users subset d
 ### Database
 As part of this project, we will develop a database in **PostgreSQL** using **pgAdmin**. 
 
-[Here](yelp_DB.sql) is the link to our SQL query.
+[Here](SQL/yelp_DB.sql) is the link to our SQL query.
 
 As demonstrated in the **Entity Relationship Diagram** below, the database consits of three tables:
 
 - Business
 
-  ![image](business.png)
+  ![image](Images/business.png)
 
 - Reviews
 
-  ![image](reviews.png)
+  ![image](Images/reviews.png)
 
 - User
 
-  ![image](users.png)
+  ![image](Images/users.png)
 
   
 
@@ -126,7 +126,7 @@ The ERD specifies a data type for each column:
 
 
 
-![image](ERD_Diagram.png)
+![image](Images/ERD_Diagram.png)
 
 
 
@@ -135,9 +135,9 @@ The ERD specifies a data type for each column:
 For **Segment 1** of this project, we used synthetic datasets generated through [generatedata.com](https://generatedata.com/generator). 
 These are our custom-tailored synthetic datasets:
 
-- [Business.csv](business.csv)
-- [Reviews.csv](reviews.csv)
-- [User.csv](user.csv)
+- [Business.csv](CSV_files/business_2.csv)
+- [Reviews.csv](CSV_files/reviews_2.csv)
+- [User.csv](CSV_files/user_2.csv)
 
 
 
