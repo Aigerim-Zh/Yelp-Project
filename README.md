@@ -181,29 +181,37 @@ Going forward, as we progress and deepen the data analysis and processing of our
 
 ### Multiple Linear Regression
 
-For **Segment 1** of this project, we built a **Multiple Linear Regression** model using synthetic data in the following steps:
+For **Segment 1**, we imported data directly from the .csv file to create the Machine Learning model. In the upcoming segments we will use SQLalchemy and an engine to establish a connection to the base. The code will be similar to the following:
 
-1. Importing Pandas and importing linear_model from *sklearn* library.
+```
+Import sqlalchemy as db
 
+engine = db.create_engine('mysql://xxxx@localhost/xx')
+
+sqlalchemy_connection = engine.connect()
+
+pd.read_sql(business, sqlalchemy_connection)
+```
+
+For this delivery, on **Segment 1** of this project, we built a **Multiple Linear Regression** model using synthetic data in the following steps:
+
+1. Importing libraries.
 2. Reading business.csv dataset into a DataFrame.
-
 3. Setting up independent and dependent variables for linear regression model:
    - X = attributes (indexed each of the five, per column name)
    - y = star rating (single column, per its name)
-
-4. Fitting the model for linear regression.
-
-5. Generating one prediction of the dependent variable (1-5 stars) for each combination of independent variables.
+4. Splitting the data into training and testing and checking the accuracy of the model.
+5. Fitting the model for linear regression.
+6. Predicting the values.
+7. Determining R squared, or coefficient.
+8. Manually generating one prediction of the dependent variable (1-5 stars) for each combination of independent variables.
    - Each attribute is True/False boolean, represented by integers 0 or 1.
    - There were five different attributes.
    - There were 32 combinations in total.
    - There were a total of 32 predictions.
+   - The outputs were floats between 1 and 5, indicating the predicted star rating for each combination of attributes.
 
-6.  The outputs were floats between 1 and 5, indicating the predicted star rating for each combination of attributes.
 
-7. We began testing implementation of SQL queries as a means to import data for regression - that corresponds to the portions of code that are commented out. We will explore later how we will best import data to use for regression (perhaps s3, gitHub remote storage for future deployment of the model).
-
-   
 
 -----------------------------------------------------------------------------------------
 ### Dashboard
