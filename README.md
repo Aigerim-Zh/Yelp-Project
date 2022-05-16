@@ -171,15 +171,15 @@ Initially we experimented with two types of Supervised Machine Learning methods:
 
 As our **Deliverable** for this Segment, we are currently selecting, at this stage, the **Multiple Linear Regression** as our most efficient method. We have our first prototype built with synthetic data that returned numerical predictions which correspond to ratings.
 
-The code can be found here: 
-
-[Linear Regression](Code/Mult_Lin_Reg_test_model.ipynb)
-
 Going forward, as we progress and deepen the data analysis and processing of our project, we intend to test our analysis and metrics to select the best predictive model, to minimize error and loss while fitting our algorithm, and to optimize the function of our model.
 
 
 
 ### Multiple Linear Regression
+
+This is the Jupyter Notebook final with our coding for this stage of the project:
+
+[Linear Regression](Code/Mult_Lin_Reg_test_model.ipynb)
 
 For **Segment 1**, we imported data directly from the .csv file to create the Machine Learning model. In the upcoming segments we will use SQLalchemy and an engine to establish a connection to the base. The code will be similar to the following:
 
