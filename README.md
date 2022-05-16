@@ -204,7 +204,7 @@ For this delivery, on **Segment 1** of this project, we built a **Multiple Linea
 5. Fitting the model for linear regression.
 6. Predicting the values.
 7. Determining R squared, or coefficient.
-8. Manually generating one prediction of the dependent variable (1-5 stars) for each combination of independent variables.
+8. Manually generating one prediction of the dependent variable (1-5 stars) for each combination of independent variables to use as a basis for understanding.
    - Each attribute is True/False boolean, represented by integers 0 or 1.
    - There were five different attributes.
    - There were 32 combinations in total.
