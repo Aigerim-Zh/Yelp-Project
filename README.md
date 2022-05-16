@@ -181,22 +181,12 @@ Going forward, as we progress and deepen the data analysis and processing of our
 
 ### Multiple Linear Regression
 
-For **Segment 1**, we imported data directly from the .csv file to create the Machine Learning model. In the upcoming segments we will use SQLalchemy and an engine to establish a connection to the base. The code will be similar to the following:
-
-```
-Import sqlalchemy as db
-
-engine = db.create_engine('mysql://xxxx@localhost/xx')
-
-sqlalchemy_connection = engine.connect()
-
-pd.read_sql(business, sqlalchemy_connection)
-```
+For **Segment 1**, we used synthetic data Machine Learning model, stored in our yelp_DB Database on PgAdmin. Using SQLalchemy, we created an engine to establish a connection to the the Database. 
 
 For this delivery, on **Segment 1** of this project, we built a **Multiple Linear Regression** model using synthetic data in the following steps:
 
 1. Importing libraries.
-2. Reading business.csv dataset into a DataFrame.
+2. Reading 'business' table, with connection to Database on PGAdmin, into a Pandas DataFrame.
 3. Setting up independent and dependent variables for linear regression model:
    - X = attributes (indexed each of the five, per column name)
    - y = star rating (single column, per its name)
