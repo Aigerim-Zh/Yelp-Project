@@ -171,32 +171,22 @@ Initially we experimented with two types of Supervised Machine Learning methods:
 
 As our **Deliverable** for this Segment, we are currently selecting, at this stage, the **Multiple Linear Regression** as our most efficient method. We have our first prototype built with synthetic data that returned numerical predictions which correspond to ratings.
 
+The code can be found here: 
+
+[Linear Regression](Mult_Lin_Reg_test_model.ipynb)
+
 Going forward, as we progress and deepen the data analysis and processing of our project, we intend to test our analysis and metrics to select the best predictive model, to minimize error and loss while fitting our algorithm, and to optimize the function of our model.
 
 
 
 ### Multiple Linear Regression
 
-This is the Jupyter Notebook final with our coding for this stage of the project:
-
-[Linear Regression](Code/Mult_Lin_Reg_test_model.ipynb)
-
-For **Segment 1**, we imported data directly from the .csv file to create the Machine Learning model. In the upcoming segments we will use SQLalchemy and an engine to establish a connection to the base. The code will be similar to the following:
-
-```
-Import sqlalchemy as db
-
-engine = db.create_engine('mysql://xxxx@localhost/xx')
-
-sqlalchemy_connection = engine.connect()
-
-pd.read_sql(business, sqlalchemy_connection)
-```
+For **Segment 1**, we used synthetic data Machine Learning model, stored in our yelp_DB Database on PgAdmin. Using SQLalchemy, we created an engine to establish a connection to the the Database. 
 
 For this delivery, on **Segment 1** of this project, we built a **Multiple Linear Regression** model using synthetic data in the following steps:
 
 1. Importing libraries.
-2. Reading business.csv dataset into a DataFrame.
+2. Reading 'business' table, with connection to Database on PGAdmin, into a Pandas DataFrame.
 3. Setting up independent and dependent variables for linear regression model:
    - X = attributes (indexed each of the five, per column name)
    - y = star rating (single column, per its name)
@@ -204,7 +194,7 @@ For this delivery, on **Segment 1** of this project, we built a **Multiple Linea
 5. Fitting the model for linear regression.
 6. Predicting the values.
 7. Determining R squared, or coefficient.
-8. Manually generating one prediction of the dependent variable (1-5 stars) for each combination of independent variables to use as a basis for understanding.
+8. Manually generating one prediction of the dependent variable (1-5 stars) for each combination of independent variables.
    - Each attribute is True/False boolean, represented by integers 0 or 1.
    - There were five different attributes.
    - There were 32 combinations in total.
