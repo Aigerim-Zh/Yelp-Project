@@ -142,7 +142,7 @@ These are our custom-tailored synthetic datasets:
 
 
 ---------------------------------------------------------------------------------------
-### Data Transformation 
+### Data Processing
 Since our data came in JSON format, it will require significant cleaning.
 
 We expect the following data cleaning tasks:
