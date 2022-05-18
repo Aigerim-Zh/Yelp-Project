@@ -32,7 +32,7 @@ CREATE TABLE Users (
 	User_ID VARCHAR (100) NOT NULL,
 	User_Name varchar (100) NOT NULL,
 	Review_Count INT NOT NULL,
-	Yelping_Since DATE NOT NULL,
+	Yelping_Since VARCHAR (100) NOT NULL,
 	Average_Stars FLOAT NOT NULL,
 	PRIMARY KEY (User_ID),
 	FOREIGN KEY (User_ID) REFERENCES Reviews (User_ID)
