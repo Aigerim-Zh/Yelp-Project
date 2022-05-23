@@ -1,0 +1,60 @@
+Business
+- 
+Restaurant_ID  PK varchar
+Restaurants_Name varchar
+Address varchar
+City varchar
+State varchar
+Postal_Code int FK >- Census_Income.Postal_Code
+Latitude float
+Longitude float
+Star_Rating float
+Review_Count int
+Restaurants_Delivery bool
+Outdoor_Seating bool
+Accepts_CreditCards bool
+Price_Range  varchar
+Alcohol bool
+Good_For_Kids bool
+Reservations bool
+Restaurants_TakeOut bool
+WiFi bool
+Good_For_Groups bool
+Wheelchair_Accessible bool
+Happy_Hour bool
+Noise_Level varchar
+Dietary_Restrictions bool
+
+Reviews
+- 
+Review_ID PK varchar
+User_ID varchar FK >- User.User_ID
+Restaurant_ID varchar FK >- Business.Restaurant_ID
+Stars_Rating float
+Review_Text varchar
+
+User
+-
+User_ID PK varchar
+User_Name varchar
+Review_Count int
+Yelping_Since varchar
+Average_Stars float
+
+Census_Income
+-
+Postal_Code PK int
+Total_Estimate_Households_per_Zip float
+Total_Estimate_Married-couple_Family_households float
+Total_Estimate_Nonfamily_households float
+Median_Income(dollars) float
+Mean_Income(dollars) float
+
+Census_Population
+-
+Postal_Code PK int FK - Census_Income.Postal_Code
+Population int
+
+
+
+
