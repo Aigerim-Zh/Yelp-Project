@@ -2,7 +2,7 @@
 CREATE TABLE Business (
     Restaurant_ID VARCHAR (100) NOT NULL,
     Restaurants_Name VARCHAR (100) NOT NULL,
-    Address VARCHAR (100) NOT NULL,
+    Address VARCHAR (300) NOT NULL,
     City VARCHAR (100) NOT NULL,
     States VARCHAR (100) NOT NULL,
     Postal_Code INT NOT NULL,
