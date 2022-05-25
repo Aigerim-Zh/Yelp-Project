@@ -4,10 +4,10 @@
 The purpose of this project is to develop a Machine Learning model to predict a restaurant's success. 
 
 Success is measured through **ratings** (from 1 to 5 stars) in the following manner:
-- 4 to 5 - successful
-- 3 to 3.9 - good
-- 2 to 2.9 - average
-- 1 to 1.9 - poor
+- 4.1 to 5 - successful
+- 3.1 to 4 - good
+- 2.1 to 3 - average
+- 1 to 2 - poor
 
 We gathered data from **Yelp** on the top restaurant attributes associated with higher or lower ratings. Based on all possible combinations of these attributes, the model will make rating predictions.
 
