@@ -8,7 +8,7 @@ State varchar
 Postal_Code int FK >- Census_Income.Postal_Code
 Latitude float
 Longitude float
-Star_Rating float
+Stars_Rating float
 Review_Count int
 Restaurants_Delivery bool
 Outdoor_Seating bool
@@ -30,7 +30,7 @@ Reviews
 Review_ID PK varchar
 User_ID varchar FK >- User.User_ID
 Restaurant_ID varchar FK >- Business.Restaurant_ID
-Stars_Rating float
+Stars_Rating int
 Review_Text varchar
 
 User
@@ -44,17 +44,13 @@ Average_Stars float
 Census_Income
 -
 Postal_Code PK int
-Total_Estimate_Households_per_Zip float
-Total_Estimate_Married-couple_Family_households float
-Total_Estimate_Nonfamily_households float
-Median_Income(dollars) float
-Mean_Income(dollars) float
+Total_Estimate_Households_per_Zip int
+Total_Estimate_Married-couple_Family_households int
+Total_Estimate_Nonfamily_households int
+Median_Income(dollars) int
+Mean_Income(dollars) int 
 
 Census_Population
 -
 Postal_Code PK int FK - Census_Income.Postal_Code
 Population int
-
-
-
-
