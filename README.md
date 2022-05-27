@@ -12,7 +12,7 @@ First, we classified the ratings into four classes: poor, average, good, and suc
 
 Having balanced data gave more equal prediction rates across classes and, therefore, the most unbiased overall accuracy. **The Easy Ensemble AdaBoost Classifier** model predicting 2 classes yielded the highest and most unbiased accuracy of **66.85%** while including all 15 restaurant features, Census income and population data, and region control. 
 
-A series of due diligence tests lead us to over a 20% increase in the accuracy rate of the strongest model. 
+Since the first stage, a series of due diligence tests lead us to over a 20% increase in the accuracy rate of the strongest model. 
 
 ---------------------------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ This is a layout of responsibilities per area that each member oversees:
 | [Ana Bisker](https://github.com/anaorenstein)       |  Data Cleaning and Merging; Machine Learning; README write-up; General Project Manager          |
 | [Hristo Bustamante](https://github.com/hbustamante8) | SQL Database Creation; Data Cleaning and Merging; Machine Learning; README write-up        |
 | [Leila Corvera Fontela](https://github.com/leilacf)  | SQL Database Creation; Data Cleaning and Merging; README write-up |
-| [Ngoc Chau](https://github.com/Ngoclchau)            | Data Cleaning and Merging; Data Extraction; Data Transforming; README write-up            |
+| [Ngoc Chau](https://github.com/Ngoclchau)            | Data Cleaning and Merging; Data Extraction; Data Transforming; SQL Database Creation; README write-up            |
 
 ## Communications
 
@@ -82,14 +82,15 @@ As part of this project, we will develop a database in **PostgreSQL** using **pg
 - Business
 - Reviews
 - User
+- Census Data
 
-The Business table has a one-to-many connection to the Reviews table through the Business_ID column.
+The ERD below demonstrates how each table is related to each other and specifies a data type for each column.
 
-The User table has a one-to-many connection to the Reviews table through the User_ID. 
+![image](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/SQL_Database_ERD/ERD_Image_Updated_May26.png)
 
-The ERD specifies a data type for each column:
-
-![image](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/ERD%20Table.png)
+- The Census Data table has a one-to-many connection to the Business table through the Postal_Code column.
+- The Business table has a one-to-many connection to the Reviews table through the Business_ID.
+- The User table has a one-to-many connection to the Reviews table through the User_ID. 
 
 ## Segment One
 
@@ -122,7 +123,7 @@ In this section, we will describe our progress in Machine Learning model impleme
 
 ## Multiple Linear Regression
 
-First, we started with a multiple regression model with a continuous target variable of star ratings. 
+First, we started with a Multiple Regression Model with a continuous target variable of star ratings. 
 
 The code can be found here: 
 
@@ -180,7 +181,7 @@ The **Naive Random Oversampling** technique for the **MultiClass Logistic Regres
 
 The **Easy Ensemble AdaBoost Classifier** produced the second-highest accuracy rate and predicted each class at a more equal rate than the Logistic Regression, however, the prediction rate for the "Good" class is quite higher than for other classes. The **Balanced Random Forest** model produced overfitting results with the training accuracy above the testing one. 
 
---
+---
 
 ### Stage 2. Four Classes with Fifteen Attributes
 To further improve the accuracy, we added 5 more restaurant attributes. 
@@ -200,7 +201,7 @@ The number of observations was reduced to 27,207.
 
 The results above show that adding these additional attributes increased the accuracy in all models. This time, the **Easy Ensemble AdaBoost Model** performed slightly better than the **Naive Random Oversampling**.
 
---
+---
 
 ### Stage 3. Four Classes with Fifteen Attributes and Census Data
 We also wanted to test the data while controlling for socio-economic factors such as income and population. We extracted the Census data from [here](). 
@@ -228,7 +229,7 @@ Adding the Census data decreased the number of observations to 24,739. As it can
 
 Since the strongest model, the Easy Ensemble AdaBoost Classifier had some improvement, we will continue including the Census data in the next steps.  
 
---
+---
 
 ### Stage 4. Two Classes with Fifteen Attributes and Census Data 
 
@@ -255,25 +256,26 @@ As a next step, we increased the threshold to 3.5:
 
 Increasing the threshold made classes much more balanced. That is why the Logistic Regression model without resampling techniques was used. 
 
-As we can see, the prediction rates in all models are more balanced out, which makes the overall accuracy more representative. The strongest model remains the Easy Ensemble AdaBoost Classifier. 
+As we can see, the prediction rates in all models are more balanced out, which makes the overall accuracy more representative. **The strongest model remains the Easy Ensemble AdaBoost Classifier**. 
 
 As we achieved the highest and most unbiased accuracy rate in this step, we wanted to test an additional feature of "State", which might control for some structural differences across regions. 
 
 Adding the State feature slightly improved the performance of **the strongest model to 66.85%**. 
 
-##### Scaling with a StandardScaler()
+#### Scaling with a StandardScaler()
 
 ![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Theshold_3.5_Stnd_Scaler.png)
 
 As the last step, we tried scaling data using a StandardScaler(). As expected, the results almost stayed the same as the models are not sensitive to scaling.
 
---
-# Feature Importance Based on the Strongest Model
+---
+# Feature Importance
 ![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Feature_Imporance.png)
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
 In the next section, the actual relation of each feature to the restaurant's classification will be examined.
+
 -----------------------------------------------------------------------------------------
 ### Dashboard
 We will use **Tableau** to create and host our dashboard, which will be connected to our **Postgres** database. 
