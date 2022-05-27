@@ -12,7 +12,7 @@ First, we classified the ratings into four classes: poor, average, good, and suc
 
 Having balanced data gave more equal prediction rates across classes and, therefore, the most unbiased overall accuracy. **The Easy Ensemble AdaBoost Classifier** model predicting 2 classes yielded the highest and most unbiased accuracy of **66.85%** while including all 15 restaurant features, Census income and population data, and region control. 
 
-Since the first stage, a series of due diligence tests lead us to over a 20% increase in the accuracy rate of the strongest model. 
+Since the first stage, a series of due diligence tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
 ---------------------------------------------------------------------------------------
 
@@ -172,8 +172,8 @@ Based on the results above, we can see that the **MultiClass Classification Logi
 - **SMOTE Oversampling**. New instances are interpolated. That is, for an instance from the minority class, new values are generated based on its distance from its neighbors.
 - **Cluster Centroids Undersamplig**. Akin to SMOTE, the algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class. 
 - **SMOTEEN, Combination of Over- and Under-Sampling** combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. It includes the following steps: 
-1. Oversample the minority class with SMOTE.
-2. Clean the resulting data with an undersampling strategy. If the two of the nearest neighbors of a data point belong to different classes, the data point is dropped.
+      1. Oversample the minority class with SMOTE.
+      2. Clean the resulting data with an undersampling strategy. If the two of the nearest neighbors of a data point belong to different classes, the data point is dropped.
 
 The results with resampling techniques show an unbiased accuracy rate for both testing and training sets and an F-1 score showing a more equal prediction success distribution. 
 
@@ -227,7 +227,7 @@ X = business_df[['Review_Count', 'Restaurants_Delivery', 'Outdoor_Seating',
 
 Adding the Census data decreased the number of observations to 24,739. As it can be seen, the accuracy rate dropped for all Logistic Regression models. However, **the accuracy only slightly improved** for the Balanced Random Forests and Easy Ensemble AdaBoost Classifier models. 
 
-Since the strongest model, the Easy Ensemble AdaBoost Classifier had some improvement, we will continue including the Census data in the next steps.  
+Since the strongest model, the Easy Ensemble AdaBoost Classifier, had some improvement, we will continue including the Census data in the next steps.  
 
 ---
 
@@ -276,6 +276,14 @@ Although the Balanced Random Forest produced overfitting results in the majority
 
 In the next section, the actual relation of each feature to the restaurant's classification will be examined.
 
+# Correlation Matrix
+![](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models#:~:text=Correlation_Matrix.png)
+
+Before running our models, we examined the correlation among all features and ratings. As it can be seen, most of features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. 
+
+We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of population. However, leaving only one population proxy did not affect the models. 
+
+
 -----------------------------------------------------------------------------------------
 ### Dashboard
 We will use **Tableau** to create and host our dashboard, which will be connected to our **Postgres** database. 
@@ -296,7 +304,9 @@ Live Presentation
 
 ### Areas for Future Analysis
 
-[TBD]
+The unexplained part of the model may come from other features that might be restaurant-specific such as cleaniness, menu and food attributes, service attributes such as the number of servers, politeness of stuff, etc. 
+
+However, these data are not available in Yelp attributes but can be extracted based on key words from review comments. In general, review comments analysis might reveal other factors determining success in the restaurant industry.
 
 -----------------------------------------------------------------------------------------
 
