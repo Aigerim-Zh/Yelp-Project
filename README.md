@@ -248,7 +248,7 @@ The prediction rates in all last two models seem to be biased toward the majorit
 
 #### Threshold of 3.5 With and Without State
 
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Threshold_3.5_with_without_State.png)
+![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Correlation_Matrix.png)
 
 As a next step, we increased the threshold to 3.5:
 - 1 to 3.4 - Lower Performance
