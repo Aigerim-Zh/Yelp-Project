@@ -54,35 +54,24 @@ CREATE TABLE "User" (
      )
 );
 
-CREATE TABLE "Census_Income" (
+CREATE TABLE "Census_Data" (
     "Postal_Code" int   NOT NULL,
     "Total_Estimate_Households_per_Zip" int   NOT NULL,
     "Total_Estimate_Married-couple_Family_households" int   NOT NULL,
     "Total_Estimate_Nonfamily_households" int   NOT NULL,
     "Median_Income(dollars)" int   NOT NULL,
     "Mean_Income(dollars)" int   NOT NULL,
-    CONSTRAINT "pk_Census_Income" PRIMARY KEY (
-        "Postal_Code"
-     )
-);
-
-CREATE TABLE "Census_Population" (
-    "Postal_Code" int   NOT NULL,
-    "Population" int   NOT NULL,
-    CONSTRAINT "pk_Census_Population" PRIMARY KEY (
+    CONSTRAINT "pk_Census_Data" PRIMARY KEY (
         "Postal_Code"
      )
 );
 
 ALTER TABLE "Business" ADD CONSTRAINT "fk_Business_Postal_Code" FOREIGN KEY("Postal_Code")
-REFERENCES "Census_Income" ("Postal_Code");
+REFERENCES "Census_Data" ("Postal_Code");
 
 ALTER TABLE "Reviews" ADD CONSTRAINT "fk_Reviews_User_ID" FOREIGN KEY("User_ID")
 REFERENCES "User" ("User_ID");
 
 ALTER TABLE "Reviews" ADD CONSTRAINT "fk_Reviews_Restaurant_ID" FOREIGN KEY("Restaurant_ID")
 REFERENCES "Business" ("Restaurant_ID");
-
-ALTER TABLE "Census_Population" ADD CONSTRAINT "fk_Census_Population_Postal_Code" FOREIGN KEY("Postal_Code")
-REFERENCES "Census_Income" ("Postal_Code");
 

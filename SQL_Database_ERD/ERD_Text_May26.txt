@@ -5,7 +5,7 @@ Restaurants_Name varchar
 Address varchar
 City varchar
 State varchar
-Postal_Code int FK >- Census_Income.Postal_Code
+Postal_Code int FK >- Census_Data.Postal_Code
 Latitude float
 Longitude float
 Stars_Rating float
@@ -41,7 +41,7 @@ Review_Count int
 Yelping_Since varchar
 Average_Stars float
 
-Census_Income
+Census_Data
 -
 Postal_Code PK int
 Total_Estimate_Households_per_Zip int
@@ -50,7 +50,7 @@ Total_Estimate_Nonfamily_households int
 Median_Income(dollars) int
 Mean_Income(dollars) int 
 
-Census_Population
--
-Postal_Code PK int FK - Census_Income.Postal_Code
-Population int
+
+
+
+
