@@ -248,7 +248,7 @@ The prediction rates in all last two models seem to be biased toward the majorit
 
 #### Threshold of 3.5 With and Without State
 
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Correlation_Matrix.png)
+![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Threshold_3.5_with_without_State.png)
 
 As a next step, we increased the threshold to 3.5:
 - 1 to 3.4 - Lower Performance
@@ -277,7 +277,7 @@ Although the Balanced Random Forest produced overfitting results in the majority
 In the next section, the actual relation of each feature to the restaurant's classification will be examined.
 
 # Correlation Matrix
-![](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models#:~:text=Correlation_Matrix.png)
+![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Correlation_Matrix.png)
 
 Before running our models, we examined the correlation among all features and ratings. As it can be seen, most of features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. 
 
