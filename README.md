@@ -187,20 +187,20 @@ The query created on **PgAdmin** to create tables in the **yelp_DB** SQL databas
 Below are screenshots of our **SQL database** per table:
 
 
-##### Yelp Business table
+##### Business table
 
-[Business](Images/Business_SQL_screenshot.png)
+![image](Images/Business_SQL_screenshot.png)
 
 
 ##### Census Data
 
-[Census_data](Images/Census_data_SQL_screenshot.png)
+![image](Images/Census_data_SQL_screenshot.png)
 
 
 
 ##### Merged Data
 
-[Merged_data](Images/Merged_data_SQL_screenshot.png)
+![image](Images/Merged_data_SQL_screenshot.png)
 
 
 
@@ -461,7 +461,7 @@ We used **Tableau** to create and host our dashboard.  We made a blueprint Table
 
 Screenshot below:
 
-![Blue-print Dashboard S2](Images/Blue-print Dashboard S2.png)
+![image](Images/Blue-print Dashboard S2.png)
 
 We may explore using interactive Javascript interface to demonstrate our model, if we have time.
 
