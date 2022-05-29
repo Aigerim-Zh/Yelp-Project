@@ -461,7 +461,8 @@ We used **Tableau** to create and host our dashboard.  We made a blueprint Table
 
 Screenshot below:
 
-![image](Images/Blue-print_Dashboard S2_screenshot.png)
+![image](Images/Blue-print_Dashboard_S2_screenshot.png)
+
 
 We may explore using interactive Javascript interface to demonstrate our model, if we have time.
 
