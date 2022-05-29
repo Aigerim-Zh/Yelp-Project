@@ -187,18 +187,18 @@ The query created on **PgAdmin** to create tables in the **yelp_DB** SQL databas
 Below are screenshots of our **SQL database** per table:
 
 
-##### Business table
+#### Business table
 
 ![image](Images/Business_SQL_screenshot.png)
 
 
-##### Census Data
+#### Census Data
 
 ![image](Images/Census_data_SQL_screenshot.png)
 
 
 
-##### Merged Data
+#### Merged Data
 
 ![image](Images/Merged_data_SQL_screenshot.png)
 
