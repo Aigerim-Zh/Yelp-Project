@@ -158,11 +158,11 @@ We used three tables with synthetic datasets generated through [generatedata.com
 
 These were our custom-tailored synthetic datasets:
 
-- [Business.csv](business.csv)
+- [Business.csv](CSV_files/business_filler.csv)
 
-- [Reviews.csv](reviews.csv)
+- [Reviews.csv](CSV_files/reviews_filler.csv)
 
-- [User.csv](user.csv)
+- [User.csv](CSV_files/user_filler.csv)
 
   
 
@@ -172,7 +172,7 @@ We merged clean data from Business and Census tables on our **SQL database** and
 
 We will be uploading our Reviews and User Tables to our SQL database in the upcoming segments, for visualization purposes only.
 
-These are the datasets that we have, in fully clean and operational format:
+These are the datasets that we have, in fully clean and operational CSV format:
 
 - [Business](CSV_files/Final_Business_Data.csv)
 
@@ -235,7 +235,7 @@ We used **Multiple Linear Regression** as our method. Our prototype was built wi
 
 The code can be found here: 
 
-[Linear Regression](Code/Mult_Lin_Reg_test_model.ipynb)
+[Linear Regression](Mult_Lin_Reg_test_model.ipynb)
 
 Going forward, we intended to test our analysis and metrics using our real data to select the best predictive model.
 
@@ -341,7 +341,7 @@ The results above show that adding these additional attributes increased the acc
 
 #### Stage 3. Four Classes with Fifteen Attributes and Census Data
 
-We also wanted to test the data while controlling for socio-economic factors such as income and population. We extracted the Census data from [here](). 
+We also wanted to test the data while controlling for socio-economic factors such as income and population. We extracted the Census data from [here](CSV_files/Census_Data.csv). 
 
 We selected the Median Income instead of the Mean Income as per the [feature selection](), in which the Median Income had a higher correlation with Stars Ratings. Moreover, as per the feature importance rank as part of all Random Forests models, the Median Income had a higher importance score. 
 
