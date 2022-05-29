@@ -487,9 +487,13 @@ Screenshot of the initial screen of our presentation below:
 
 ## Areas for Future Analysis
 
+### Sentiment Analysis on Reviews
+
 The unexplained part of the model may come from other features that might be restaurant-specific such as cleaniness, menu and food attributes, service attributes such as the number of servers, politeness of stuff, etc. 
 
 However, these data are not available in Yelp attributes but can be extracted based on key words from review comments. In general, review comments analysis might reveal other factors determining success in the restaurant industry.
+
+### Deeper study into User Yelp profiles
 
 
 
