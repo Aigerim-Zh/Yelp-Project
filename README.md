@@ -158,11 +158,11 @@ We used three tables with synthetic datasets generated through [generatedata.com
 
 These were our custom-tailored synthetic datasets:
 
-- [Business.csv](CSV_files/business_filler.csv)
+- [Business.csv](CSV_files/business_2.csv)
 
-- [Reviews.csv](CSV_files/reviews_filler.csv)
+- [Reviews.csv](CSV_files/reviews_2.csv)
 
-- [User.csv](CSV_files/user_filler.csv)
+- [User.csv](CSV_files/user_2.csv)
 
   
 
