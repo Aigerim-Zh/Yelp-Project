@@ -260,15 +260,15 @@ Going forward, we intended to test our analysis and metrics using our real data 
 
 #### Summary of Findings
 
-Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that The R^2 of this model was no higher than 0.13541039205285688. The code for this stage of Machine Learning testing can be found [here](Regression_ML_model.ipynb).
+Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that the R^2 of this model was no higher than 0.13541039205285688. The code for this stage of Machine Learning testing can be found [here](Regression_ML_model.ipynb).
 
-After inspecting the data more closely, we found that the target variable of Stars Ratings follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
+After inspecting the data more closely, we found that the target variable of 'stars ratings' follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
 
 We moved to classification models with a categorical target variable. First, we classified the ratings into **four** classes: poor, average, good, and successful. However, we obtained better performance with **two** classes only: lower- and higher-performing restaurants. 
 
-We started with 10 features and added 5 more restaurant features, which increased the accuracy. The models controlling for socio-economic factors such as income and population tend to perform slightly better. Finally, adding the State feature also slightly improved the model indicating small structural differences across examined regions. 
+We started with 10 features and added 5 more restaurant features, which increased the accuracy. The models controlling for socio-economic factors such as income and total households tend to perform slightly better. Finally, adding the 'state' feature also slightly improved the model indicating small structural differences across examined regions. 
 
-Having balanced data gave more equal prediction rates across classes and, therefore, the most unbiased overall accuracy. **The Easy Ensemble AdaBoost Classifier** model predicting 2 classes yielded the highest and most unbiased accuracy of **66.68%** while including all 15 restaurant features, Census income and population data, and region control. 
+Having balanced data gave more equal prediction rates across classes and, therefore, the most unbiased overall accuracy. **The Easy Ensemble AdaBoost Classifier** model predicting 2 classes yielded the highest and most unbiased accuracy of **66.68%** while including all 15 restaurant features, Census income and household data, and region control. 
 
 Since the first stage, a series of due diligence tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
