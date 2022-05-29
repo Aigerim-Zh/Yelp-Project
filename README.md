@@ -211,6 +211,8 @@ All data CSV files were imported into Postgres according to Schemas that were cr
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
+We began with a Multiple Linear Regression model, on Segment One. Based on the results from the Linear Regression Model, we moved to classification models with a categorical target variable for Segment Two.
+
 
 
 ### Segment One
@@ -221,7 +223,7 @@ The code can be found here:
 
 [Linear Regression](Code/Mult_Lin_Reg_test_model.ipynb)
 
-Going forward, we intended to test our analysis and metrics to select the best predictive model.
+Going forward, we intended to test our analysis and metrics using our real data to select the best predictive model.
 
 
 
@@ -229,7 +231,9 @@ Going forward, we intended to test our analysis and metrics to select the best p
 
 #### Summary of Findings
 
-First, we classified the ratings into **four** classes: poor, average, good, and successful. However, we obtained better performance with **two** classes only: lower- and higher-performing restaurants. 
+Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that The R^2 of this model was no higher than 0.1392695603000994. After inspecting the data more closely, we found that the target variable of Stars Ratings follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
+
+We moved to classification models with a categorical target variable. First, we classified the ratings into **four** classes: poor, average, good, and successful. However, we obtained better performance with **two** classes only: lower- and higher-performing restaurants. 
 
 We started with 10 features and added 5 more restaurant features, which increased the accuracy. The models controlling for socio-economic factors such as income and population tend to perform slightly better. Finally, adding the State feature also slightly improved the model indicating small structural differences across examined regions. 
 
@@ -237,19 +241,14 @@ Having balanced data gave more equal prediction rates across classes and, theref
 
 Since the first stage, a series of due diligence tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
+Our **final** Machine Learning Model for **Segment Two Deliverable** can be found [here](Final_ML_Code.ipynb).
+
+Below you will find a detailed description of every classification model and method we tested, and their comparisons.
 
 
-### Machine Learning Methods
+#### Classification Models and Methods
 
-#### Multiple Linear Regression
-
-On the week subsequent to submission, we inputed our actual data into the Linear Regression model. On doing that, we observed that The R^2 of this model was [x]. After inspecting the data more closely, we found that the target variable of Stars Ratings follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
-
-#### Classification Models
-
-Based on the results from the Linear Regression Model, we moved to classification models with a categorical target variable. 
-
-All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models).
+All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models). 
 
 We will compare each model based on its overall accuracy score and an F-1 score for each class, a harmonic mean of precision, and recall rates. The F-1 score metric will be used since neither precision nor recall has higher importance, given the topic question.
 
