@@ -164,7 +164,7 @@ We will be uploading our Reviews and User Tables to our SQL database in the upco
 
 These are the datasets that we have, in fully clean and operational format:
 
-- [Business](**CSV_files/Final_Business_Data.csv**)
+- [Business](CSV_files/Final_Business_Data.csv)
 
 - [Census Data](CSV_files/Census_Data.csv)
 
