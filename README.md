@@ -14,6 +14,8 @@ Testing a series of Machine Learning models, we hope to establish which one yiel
 
 
 
+
+
 ---------------------------------------------------------------------------------------
 
 ## Motivation 
@@ -23,6 +25,8 @@ The COVID-19 pandemic has presented a multitude of constraints and economic down
 By accessing data on the top rated attributes, restaurant owners and investors can learn how to best appeal to the public in such ever-changing times. Just as the nature of our social interactions have changed, so have current demands and trends. Therefore, it is of critical importance for business owners to remain well informed on the story the data tells to better understand social transitions. 
 
 The predictive model developed in this project can be applied to other regions and can also be used by various stakeholders, in analyzing upcoming opportunities and their advantages and disadvantages.
+
+
 
 
 
@@ -55,6 +59,8 @@ This is a layout of responsibilities per area that each member oversees:
 - Direct Messaging:
   - SMS group messages
   - Slack group
+
+
 
 
 
@@ -92,6 +98,8 @@ This is a layout of responsibilities per area that each member oversees:
 
 
 
+
+
 ---------------------------------------------------------------------------------------
 
 ## Data Source
@@ -116,6 +124,8 @@ We visited [Census.gov](https://data.census.gov/cedsci/table) and filtered  by s
 
 - Our original data contained 9,745 records.
 - After cleaning, we had 9,045 records.
+
+
 
 
 
@@ -173,6 +183,8 @@ These are the datasets that we have, in fully clean and operational format:
 - [User](https://drive.google.com/file/d/1m-aPIg1Ka27wNYApCrMs1Gh5ZQ9SUyFv/view?usp=sharing)
 
   
+  
+  
 
 ---------------------------------------------------------------------------------------
 
@@ -202,6 +214,8 @@ Census table - imported from census.gov in CSV format.
 - Checked for data types, duplicates, and null values. 
 
 All data CSV files were imported into Postgres according to Schemas that were created by queries.
+
+
 
 
 
@@ -418,6 +432,8 @@ We can also see a relatively high correlation among the Census population featur
 
 
 
+
+
 -----------------------------------------------------------------------------------------
 
 ## Dashboard
@@ -432,6 +448,8 @@ We may explore using interactive Javascript interface to demonstrate our model, 
 
 
 
+
+
 -----------------------------------------------------------------------------------------
 
 ## Project Presentation 
@@ -439,6 +457,8 @@ We may explore using interactive Javascript interface to demonstrate our model, 
 Google Slides will be for our live presentation. The draft of our presentation slides can be seen [here](https://docs.google.com/presentation/d/18GWN6LmhtkoVwcq43I3RUQ_keQdY6Q2PWb0nEIa3FOg/edit?usp=sharing).
 
 Screenshot below:
+
+
 
 
 
@@ -456,11 +476,15 @@ However, these data are not available in Yelp attributes but can be extracted ba
 
 
 
+
+
 -----------------------------------------------------------------------------------------
 
 ## Areas for Improvement 
 
 [TBD]
+
+
 
 
 
