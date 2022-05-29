@@ -142,7 +142,7 @@ As part of this project, we have developed a database in **PostgreSQL** using **
 
 The ERD below demonstrates how each table is related to each other and specifies a data type for each column.
 
-![image](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/SQL_Database_ERD/ERD_Image_Updated_May26.png)
+![image](Images/ERD_Final.png)
 
 - The Census Data table has a one-to-many connection to the Business table through the Postal_Code column.
 
@@ -182,7 +182,7 @@ These are the datasets that we have, in fully clean and operational CSV format:
 
 - [User](https://drive.google.com/file/d/1m-aPIg1Ka27wNYApCrMs1Gh5ZQ9SUyFv/view?usp=sharing)
 
-The query created on **PgAdmin** to create tables in the **yelp_DB** SQL database can be visualized [here](YELP_S2DB_CODE.sql).
+The query created on **PgAdmin** to create tables in the **yelp_DB** SQL database can be visualized [here](SQL/YELP_S2DB_CODE.sql).
 
 Below are screenshots of our **SQL database** per table:
 
