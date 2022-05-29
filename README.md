@@ -187,7 +187,7 @@ The query created on **PgAdmin** to create tables in the **yelp_DB** SQL databas
 Below are screenshots of our **SQL database** per table:
 
 
-#### Business table
+#### Business
 
 ![image](Images/Business_SQL_screenshot.png)
 
