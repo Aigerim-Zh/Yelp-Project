@@ -168,7 +168,7 @@ These were our custom-tailored synthetic datasets:
 
 ### Segment Two
 
-We merged clean data from Business and Census tables on our **SQL database** and titled the new table Merged Data. We used SQLAlchemy on a Jupyter Notebook to create a connection for the merged table to be read into the Machine Learning model. 
+We merged clean data from Business and Census tables on our **SQL database** and titled the new table **Merged Data**. We used **SQLAlchemy on a Jupyter Notebook** to create a connection for the merged table to be read into the Machine Learning model. 
 
 We will be uploading our Reviews and User Tables to our SQL database in the upcoming segments, for visualization purposes only.
 
@@ -182,9 +182,28 @@ These are the datasets that we have, in fully clean and operational CSV format:
 
 - [User](https://drive.google.com/file/d/1m-aPIg1Ka27wNYApCrMs1Gh5ZQ9SUyFv/view?usp=sharing)
 
-  
-  
-  
+The query created on **PgAdmin** to create tables in the **yelp_DB** SQL database can be visualized [here](YELP_S2DB_CODE.sql).
+
+Below are screenshots of our **SQL database** per table:
+
+
+##### Yelp Business table
+
+[Business](Images/Business_SQL_screenshot.png)
+
+
+##### Census Data
+
+[Census_data](Images/Census_data_SQL_screenshot.png)
+
+
+
+##### Merged Data
+
+[Merged_data](Images/Merged_data_SQL_screenshot.png)
+
+
+
 
 ---------------------------------------------------------------------------------------
 
@@ -442,7 +461,7 @@ We used **Tableau** to create and host our dashboard.  We made a blueprint Table
 
 Screenshot below:
 
-![Blue-print Dashboard S2](/Users/anabisker/Downloads/Blue-print Dashboard S2.png)
+![Blue-print Dashboard S2](Images/Blue-print Dashboard S2.png)
 
 We may explore using interactive Javascript interface to demonstrate our model, if we have time.
 
