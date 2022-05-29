@@ -343,7 +343,7 @@ The results above show that adding these additional attributes increased the acc
 
 We also wanted to test the data while controlling for socio-economic factors such as income and population. We extracted the Census data from [here](CSV_files/Census_Data.csv). 
 
-We selected the Median Income instead of the Mean Income as per the [feature selection](), in which the Median Income had a higher correlation with Stars Ratings. Moreover, as per the feature importance rank as part of all Random Forests models, the Median Income had a higher importance score. 
+We selected the Median Income instead of the Mean Income as per the [feature selection](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Feature_Selection.ipynb), in which the Median Income had a higher correlation with Stars Ratings. Moreover, as per the feature importance rank as part of all Random Forests models, the Median Income had a higher importance score. 
 
 Now, the set of features looks as follows:
 
