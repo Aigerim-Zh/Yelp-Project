@@ -268,7 +268,7 @@ We moved to classification models with a categorical target variable. First, we 
 
 We started with 10 features and added 5 more restaurant features, which increased the accuracy. The models controlling for socio-economic factors such as income and population tend to perform slightly better. Finally, adding the State feature also slightly improved the model indicating small structural differences across examined regions. 
 
-Having balanced data gave more equal prediction rates across classes and, therefore, the most unbiased overall accuracy. **The Easy Ensemble AdaBoost Classifier** model predicting 2 classes yielded the highest and most unbiased accuracy of **66.85%** while including all 15 restaurant features, Census income and population data, and region control. 
+Having balanced data gave more equal prediction rates across classes and, therefore, the most unbiased overall accuracy. **The Easy Ensemble AdaBoost Classifier** model predicting 2 classes yielded the highest and most unbiased accuracy of **66.68%** while including all 15 restaurant features, Census income and population data, and region control. 
 
 Since the first stage, a series of due diligence tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
