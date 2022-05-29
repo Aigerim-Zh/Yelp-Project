@@ -250,11 +250,9 @@ We began with a **Multiple Linear Regression** model, on **Segment One**. Based 
 
 ### Segment One
 
-We used **Multiple Linear Regression** as our method. Our prototype was built with synthetic data that returned numerical predictions which corresponded to ratings.
+We used **Multiple Linear Regression** as our method. Our prototype was built with synthetic data that returned numerical predictions which corresponded to ratings. The code can be found [here](Mult_Lin_Reg_test_model.ipynb).
 
-The code can be found [here](Regression_ML_model.ipynb).
-
-Going forward, we intended to test our analysis and metrics using our real data to select the best predictive model.
+Going forward, we intended to test our analysis and metrics using our real data to select the best predictive model. 
 
 
 
@@ -262,7 +260,9 @@ Going forward, we intended to test our analysis and metrics using our real data 
 
 #### Summary of Findings
 
-Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that The R^2 of this model was no higher than 0.13541039205285688. After inspecting the data more closely, we found that the target variable of Stars Ratings follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
+Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that The R^2 of this model was no higher than 0.13541039205285688. The code for this stage of Machine Learning testing can be found [here](Regression_ML_model.ipynb).
+
+After inspecting the data more closely, we found that the target variable of Stars Ratings follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
 
 We moved to classification models with a categorical target variable. First, we classified the ratings into **four** classes: poor, average, good, and successful. However, we obtained better performance with **two** classes only: lower- and higher-performing restaurants. 
 
