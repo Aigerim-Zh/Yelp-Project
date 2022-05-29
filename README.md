@@ -211,7 +211,7 @@ All data CSV files were imported into Postgres according to Schemas that were cr
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
-We began with a Multiple Linear Regression model, on Segment One. Based on the results from the Linear Regression Model, we moved to classification models with a categorical target variable for Segment Two.
+We began with a **Multiple Linear Regression** model, on **Segment One**. Based on the results from the Linear Regression Model, we moved to **classification models** with a categorical target variable for **Segment Two**.
 
 
 
@@ -243,10 +243,11 @@ Since the first stage, a series of due diligence tests lead us to **over a 20% a
 
 Our **final** Machine Learning Model for **Segment Two Deliverable** can be found [here](Final_ML_Code.ipynb).
 
+
+
+### Classification Models and Methods
+
 Below you will find a detailed description of every classification model and method we tested, and their comparisons.
-
-
-#### Classification Models and Methods
 
 All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models). 
 
@@ -269,7 +270,7 @@ In **Stages 1 to 3**, we used Yelp data's ratings and put them into **four class
 
 
 
-##### Stage 1. Four Classes with Ten Attributes
+#### Stage 1. Four Classes with Ten Attributes
 
 In Stage 1, we included 10 restaurant attributes recorded by Yelp:
 
@@ -302,7 +303,7 @@ The **Easy Ensemble AdaBoost Classifier** produced the second-highest accuracy r
 
 
 
-##### Stage 2. Four Classes with Fifteen Attributes
+#### Stage 2. Four Classes with Fifteen Attributes
 
 To further improve the accuracy, we added 5 more restaurant attributes. 
 
@@ -324,7 +325,7 @@ The results above show that adding these additional attributes increased the acc
 
 
 
-##### Stage 3. Four Classes with Fifteen Attributes and Census Data
+#### Stage 3. Four Classes with Fifteen Attributes and Census Data
 
 We also wanted to test the data while controlling for socio-economic factors such as income and population. We extracted the Census data from [here](). 
 
@@ -353,11 +354,12 @@ Since the strongest model, the Easy Ensemble AdaBoost Classifier, had some impro
 
 
 
-##### Stage 4. Two Classes with Fifteen Attributes and Census Data 
+#### Stage 4. Two Classes with Fifteen Attributes and Census Data 
 
 As a next step, we tried categorizing the target variable into two classes: lower- and higher-performing restaurants. It might be more compelling for restaurants to know if they belong to one of these two categories rather than one of the four previous categories.
 
-##### Threshold of 3
+
+#### Threshold of 3
 
 We first started with a threshold of 3:
 
@@ -369,7 +371,6 @@ We first started with a threshold of 3:
 Reducing the number of classes significantly improved accuracy in all cases. However, as we can see, the two classes are unbalanced with the majority falling into the high-performance category. That is why we run the Logistic Regression model with resampling techniques to balance out the classes and their prediction rates. 
 
 The prediction rates in all last two models seem to be biased toward the majority class.
-
 
 
 #### Threshold of 3.5 With and Without State
@@ -390,13 +391,11 @@ As we achieved the highest and most unbiased accuracy rate in this step, we want
 Adding the State feature slightly improved the performance of **the strongest model to 66.85%**. 
 
 
-
 #### Scaling with a StandardScaler()
 
 ![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Theshold_3.5_Stnd_Scaler.png)
 
 As the last step, we tried scaling data using a StandardScaler(). As expected, the results almost stayed the same as the models are not sensitive to scaling.
-
 
 
 #### Feature Importance
@@ -406,7 +405,6 @@ As the last step, we tried scaling data using a StandardScaler(). As expected, t
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
 In the next section, the actual relation of each feature to the restaurant's classification will be examined.
-
 
 
 #### Correlation Matrix
