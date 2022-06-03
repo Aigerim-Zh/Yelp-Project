@@ -286,7 +286,7 @@ Our **final** Machine Learning Model for **Segment Two Deliverable** can be foun
 
 [Here](Stages.md) you can read a detailed description of every classification model and method we tested, and their comparisons.
 
-All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models). 
+All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models). **--> Aigerim please make copy of this to main**
 
 We compared each model based on its overall accuracy score and an F-1 score for each class, a harmonic mean of precision, and recall rates. The F-1 score metric was used since neither precision nor recall has higher importance, given the topic question.
 
@@ -300,7 +300,8 @@ Below are the four main stages in our machine learning development process. In e
 
 ### Feature Importance
 
-Boxplots per feature can be seen [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Exploratory_Analysis.ipynb).
+Boxplots per feature can be seen [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Exploratory_Analysis.ipynb). **--> Aigerim please make copy of this to main**
+
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
