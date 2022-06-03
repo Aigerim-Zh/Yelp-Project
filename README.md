@@ -323,7 +323,7 @@ We can also see a relatively high correlation among the Census population featur
 
 ### Segment Three
 
-After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we more time and a larger number of observations, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
+We did research and tested various _Suported Vector Machine_ or **SVM** machine learning methods. After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we more time and a larger number of observations, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
 
 
 
