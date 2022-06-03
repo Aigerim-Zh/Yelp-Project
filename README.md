@@ -300,7 +300,7 @@ Below are the four main stages in our machine learning development process. In e
 
 ### Feature Importance
 
-Boxplots per feature can be seen [here]().
+Boxplots per feature can be seen [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Exploratory_Analysis.ipynb).
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
@@ -333,7 +333,7 @@ After Scaling the data, we reached the best performance with and *rbf* kernel wi
 
 ## Dashboard
 
-<img src="Images/tableau-logo.jpeg" style="zoom: 67%;" />
+<img src="Images/tableau-logo.jpeg" style="zoom: 50%;" />
 
 We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject/ByStateDashboard?publish=yes). 
 
