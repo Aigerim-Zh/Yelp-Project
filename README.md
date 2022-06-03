@@ -1,4 +1,4 @@
-# Yelp Restaurant Performance Prediction 
+# Yelp Restaurant Performance Prediction		<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/logo-round2.jpeg" style="zoom: 50%;" /> 
 
 
 
@@ -32,9 +32,7 @@ The predictive model developed in this project can be applied to other regions a
 
 ---------------------------------------------------------------------------------------
 
-## Team Members & Communication Protocols
-
-### Our Team
+## Our Team
 
 In this group project, responsibilities were shared equally among all team members. Each team member participated in generating content for the various areas of the project. 
 
@@ -50,23 +48,13 @@ This is a layout of responsibilities per area that each member oversees:
 
 
 
-### Communications
-
-- Team members have allocated a regular slot for weekly meetings over Zoom in addition to the bi-weekly meetings that are had during class. 
-- We created a shared Google Drive that contains:
-  - Useful Links - Zoom, Project GitHub, Dataset Guide, Project Rubrics
-  - Miscellaneous Brainstorming
-- Direct Messaging:
-  - SMS group messages
-  - Slack group
-
 
 
 
 
 ---------------------------------------------------------------------------------------
 
-## Questions We Hope to Answer 
+## Questions We Hope to Answer
 
 - What attributes are the most important in making a restaurant more or less successful?
 
@@ -102,7 +90,9 @@ This is a layout of responsibilities per area that each member oversees:
 
 ---------------------------------------------------------------------------------------
 
-## Data Source
+## <img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/black-and-white.png" style="zoom:50%;" />	Data Source
+
+
 
 ### Yelp Data
 
@@ -166,11 +156,11 @@ These were our custom-tailored synthetic datasets:
 
   
 
-### Segment Two
+### Segments Two
 
 We merged clean data from Business and Census tables on our **SQL database** and titled the new table **Merged Data**. We used **SQLAlchemy on a Jupyter Notebook** to create a connection for the merged table to be read into the Machine Learning model. 
 
-We will be uploading our Reviews and User Tables to our SQL database in the upcoming segments, for visualization purposes only.
+We aim to upload our Reviews and User Tables to our SQL database in the upcoming segments, for visualization purposes only.
 
 These are the datasets that we have, in fully clean and operational CSV format:
 
@@ -201,6 +191,19 @@ Below are screenshots of our **SQL database** per table:
 #### Merged Data
 
 ![image](Images/Merged_data_SQL_screenshot.png)
+
+
+
+### Segment Three
+
+We attempted to upload our **Reviews** and **User** Tables to our SQL database in the upcoming segments, for visualization and future uses only, but were not successful as the datasets were too large.
+
+Instead, we stored our datasets in a shared Google Drive which can be found here:
+
+- **[Reviews](https://drive.google.com/file/d/1GxdcTL88A87F_E813_EBfPYJ1l3jqRm6/view?usp=sharing)**
+- [**Users**](https://drive.google.com/file/d/1m-aPIg1Ka27wNYApCrMs1Gh5ZQ9SUyFv/view?usp=sharing)
+
+For future use and further research, we would use AWS and Postgres to store and manipulate the data. 
 
 
 
@@ -240,11 +243,13 @@ All data CSV files were imported into Postgres according to Schemas that were cr
 
 ---------------------------------------------------------------------------------------
 
-## Machine Learning
+## Machine Learning					<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/jupyter-pandas-python.jpeg" style="zoom:50%;" />
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
-We began with a **Multiple Linear Regression** model, on **Segment One**. Based on the results from the Linear Regression Model, we moved to **classification models** with a categorical target variable for **Segment Two**.
+We began with a **Multiple Linear Regression** model, on **Segment One**. Based on the results from the Linear Regression Model, we moved to **classification models** with a **categorical** target variable for **Segment Two**.
+
+On **Segment Three** we scaled the data and experimented with different kernel settings in **SVM**.
 
 
 
@@ -260,7 +265,7 @@ Going forward, we intended to test our analysis and metrics using our real data 
 
 #### Summary of Findings
 
-Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that the R^2 of this model was no higher than 0.13541039205285688. The code for this stage of Machine Learning testing can be found [here](Regression_ML_model.ipynb).
+Subsequent to submission of Segment One, we inputed our actual data into the Linear Regression model. Doing that, we observed that the R^2 of this model was no higher than 0.14. The code for this stage of Machine Learning testing can be found [here](Regression_ML_model.ipynb).
 
 After inspecting the data more closely, we found that the target variable of 'stars ratings' follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
 
@@ -272,17 +277,17 @@ Having balanced data gave more equal prediction rates across classes and, theref
 
 Since the first stage, a series of due diligence tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
-Our **final** Machine Learning Model for **Segment Two Deliverable** can be found [here](Final_ML_Code.ipynb).
+Our **final** Machine Learning Model for **Segment Two Deliverable** can be found [here](Final_ML_2.ipynb).
 
 
 
 ### Classification Models and Methods
 
-Below you will find a detailed description of every classification model and method we tested, and their comparisons.
+[Here](Stages.md) you can read a detailed description of every classification model and method we tested, and their comparisons.
 
 All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/Aigerim/Machine_Learning_Models). 
 
-We will compare each model based on its overall accuracy score and an F-1 score for each class, a harmonic mean of precision, and recall rates. The F-1 score metric will be used since neither precision nor recall has higher importance, given the topic question.
+We compared each model based on its overall accuracy score and an F-1 score for each class, a harmonic mean of precision, and recall rates. The F-1 score metric was used since neither precision nor recall has higher importance, given the topic question.
 
 Below are the four main stages in our machine learning development process. In each stage, we tested the following models:
 
@@ -292,159 +297,29 @@ Below are the four main stages in our machine learning development process. In e
 
 
 
-In **Stages 1 to 3**, we used Yelp data's ratings and put them into **four classes**:
+### Feature Importance
 
-* 4.1 to 5 - Successful
-* 3.1 to 4 - Good
-* 2.1 to 3 - Average
-* 1 to 2 - Poor
+Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
+<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/feature_importance.png" style="zoom:67%;" />
 
 
-#### Stage 1. Four Classes with Ten Attributes
 
-In Stage 1, we included 10 restaurant attributes recorded by Yelp:
-
-```
-X = business_df[['Review_Count', 'Restaurants_Delivery', 'Outdoor_Seating',
-       'Restaurants_TakeOut', 'WiFi', 'Restaurants_Reservations',
-       'Good_For_Groups', 'Wheelchair_Accessible', 'Happy_Hour',
-       'Dietary_Restrictions']]
-```
-
-The dataset has 49,857 observations. 
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/01_ML_Results.png)
-
-
-Based on the results above, we can see that the **MultiClass Classification Logistic Regression** is biased toward the majority classes. That is why we tried the following resampling techniques:
-
-- **Naive Random Oversampling**. Instances of the minority class are randomly selected and added to the training set until the majority and minority classes are balanced.
-- **SMOTE Oversampling**. New instances are interpolated. That is, for an instance from the minority class, new values are generated based on its distance from its neighbors.
-- **Cluster Centroids Undersamplig**. Akin to SMOTE, the algorithm identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class. 
-- **SMOTEEN, Combination of Over- and Under-Sampling** combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms. It includes the following steps: 
-      1. Oversample the minority class with SMOTE.
-      2. Clean the resulting data with an undersampling strategy. If the two of the nearest neighbors of a data point belong to different classes, the data point is dropped.
-
-The results with resampling techniques show an unbiased accuracy rate for both testing and training sets and an F-1 score showing a more equal prediction success distribution. 
-
-The **Naive Random Oversampling** technique for the **MultiClass Logistic Regression** model produced the highest unbiased testing accuracy rate (43.32%) with no overfitting. Moreover, the prediction rate for each class is not very different.
-
-The **Easy Ensemble AdaBoost Classifier** produced the second-highest accuracy rate and predicted each class at a more equal rate than the Logistic Regression, however, the prediction rate for the "Good" class is quite higher than for other classes. The **Balanced Random Forest** model produced overfitting results with the training accuracy above the testing one. 
-
-
-
-#### Stage 2. Four Classes with Fifteen Attributes
-
-To further improve the accuracy, we added 5 more restaurant attributes. 
-
-The list of features looks as follows:
-
-```
-X = business_df.['Review_Count', 'Restaurants_Delivery', 'Outdoor_Seating',
-       'Accepts_CreditCards', 'Price_Range', 'Alcohol', 'Good_For_Kids',
-       'Reservations', 'Restaurants_TakeOut', 'WiFi', 'Good_For_Groups',
-       'Wheelchair_Accessible', 'Happy_Hour', 'Noise_Level',
-       'Dietary_Restrictions''])
-```
-
-The number of observations was reduced to 27,207.
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/02_ML_Results.png)
-
-The results above show that adding these additional attributes increased the accuracy in all models. This time, the **Easy Ensemble AdaBoost Model** performed slightly better than the **Naive Random Oversampling**.
-
-
-
-#### Stage 3. Four Classes with Fifteen Attributes and Census Data
-
-We also wanted to test the data while controlling for socio-economic factors such as income and population. We extracted the Census data from [here](CSV_files/Census_Data.csv). 
-
-We selected the Median Income instead of the Mean Income as per the [feature selection](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Feature_Selection.ipynb), in which the Median Income had a higher correlation with Stars Ratings. Moreover, as per the feature importance rank as part of all Random Forests models, the Median Income had a higher importance score. 
-
-Now, the set of features looks as follows:
-
-```
-X = business_df[['Review_Count', 'Restaurants_Delivery', 'Outdoor_Seating',
-       'Accepts_CreditCards', 'Price_Range', 'Alcohol', 'Good_For_Kids',
-       'Reservations', 'Restaurants_TakeOut', 'WiFi', 'Good_For_Groups',
-       'Wheelchair_Accessible', 'Happy_Hour', 'Noise_Level',
-       'Dietary_Restrictions',
-         'Total_Estimate_Married-couple_Family_households',
-       'Total_Estimate_Nonfamily_households',
-                'Median_Income(dollars)', 
-                'Total_Estimate_Households_per_Zip']]
-
-```
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/03_ML_Results.png)
-
-Adding the Census data decreased the number of observations to 24,739. As it can be seen, the accuracy rate dropped for all Logistic Regression models. However, **the accuracy only slightly improved** for the Balanced Random Forests and Easy Ensemble AdaBoost Classifier models. 
-
-Since the strongest model, the Easy Ensemble AdaBoost Classifier, had some improvement, we will continue including the Census data in the next steps.  
-
-
-
-#### Stage 4. Two Classes with Fifteen Attributes and Census Data 
-
-As a next step, we tried categorizing the target variable into two classes: lower- and higher-performing restaurants. It might be more compelling for restaurants to know if they belong to one of these two categories rather than one of the four previous categories.
-
-
-#### Threshold of 3
-
-We first started with a threshold of 3:
-
-- 1 to 2.9 - Lower Performance
-- 3 to 5 - Higher Performance
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Theshold_3_ML_Results.png)
-
-Reducing the number of classes significantly improved accuracy in all cases. However, as we can see, the two classes are unbalanced with the majority falling into the high-performance category. That is why we run the Logistic Regression model with resampling techniques to balance out the classes and their prediction rates. 
-
-The prediction rates in all last two models seem to be biased toward the majority class.
-
-
-#### Threshold of 3.5 With and Without State
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Threshold_3.5_with_without_State.png)
-
-As a next step, we increased the threshold to 3.5:
-
-- 1 to 3.4 - Lower Performance
-- 3.5 to 5 - Higher Performance
-
-Increasing the threshold made classes much more balanced. That is why the Logistic Regression model without resampling techniques was used. 
-
-As we can see, the prediction rates in all models are more balanced out, which makes the overall accuracy more representative. **The strongest model remains the Easy Ensemble AdaBoost Classifier**. 
-
-As we achieved the highest and most unbiased accuracy rate in this step, we wanted to test an additional feature of "State", which might control for some structural differences across regions. 
-
-Adding the State feature slightly improved the performance of **the strongest model to 66.85%**. 
-
-
-#### Scaling with a StandardScaler()
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/ML_Results/Images/04_Theshold_3.5_Stnd_Scaler.png)
-
-As the last step, we tried scaling data using a StandardScaler(). As expected, the results almost stayed the same as the models are not sensitive to scaling.
-
-
-#### Feature Importance
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Feature_Imporance.png)
-
-Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
-
-In the next section, the actual relation of each feature to the restaurant's classification will be examined.
-
-
-#### Correlation Matrix
-
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/Aigerim/Machine_Learning_Models/Correlation_Matrix.png)
+### Correlation Matrix
 
 Before running our models, we examined the correlation among all features and ratings. As it can be seen, most of features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. 
 
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of population. However, leaving only one population proxy did not affect the models. 
+
+
+
+<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/correlation_matrix.png" style="zoom:67%;" />
+
+
+
+### Segment Three
+
+After Scaling the data, we reached the best performance with and *rbf* kernel with gamma and C. There **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we do not know for SVM. Had we more time and more ample data, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf).
 
 
 
@@ -455,11 +330,13 @@ We can also see a relatively high correlation among the Census population featur
 
 ## Dashboard
 
-We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/shared/Q7987888K?:display_count=n&:origin=viz_share_link). 
+<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/tableau-logo.jpeg" style="zoom: 67%;" />
+
+We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject/ByStateDashboard?publish=yes). 
 
 Screenshot below:
 
-![image](Images/Blue-print_Dashboard_S2_screenshot.png)
+![image](Images/tableau-screenshot2.png)
 
 
 We may explore using interactive Javascript interface to demonstrate our model, if we have time.
@@ -474,9 +351,11 @@ We may explore using interactive Javascript interface to demonstrate our model, 
 
 Google Slides will be for our live presentation. The draft of our presentation slides can be seen [here](https://docs.google.com/presentation/d/18GWN6LmhtkoVwcq43I3RUQ_keQdY6Q2PWb0nEIa3FOg/edit?usp=sharing).
 
+
+
 Screenshot of the initial screen of our presentation below:
 
-![image](Images/Slide_screenshot.png)
+![image](Images/Slide-screenshot2.png)
 
 
 
@@ -500,15 +379,8 @@ Screenshot of the initial screen of our presentation below:
 
 
 
-
-
 -----------------------------------------------------------------------------------------
 
 ## Areas for Improvement 
 
 [TBD]
-
-
-
-
-
