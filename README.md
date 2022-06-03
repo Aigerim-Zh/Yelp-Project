@@ -300,9 +300,11 @@ Below are the four main stages in our machine learning development process. In e
 
 ### Feature Importance
 
+Boxplots per feature can be seen [here]().
+
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
-<img src="Images/feature_importance.png" style="zoom:67%;" />
+<img src="Images/feature_importance.png" style="zoom:50%;" />
 
 
 
@@ -314,13 +316,13 @@ We can also see a relatively high correlation among the Census population featur
 
 
 
-<img src="Images/correlation_matrix.png" style="zoom:67%;" />
+<img src="Images/correlation_matrix.png" style="zoom:50%;" />
 
 
 
 ### Segment Three
 
-After Scaling the data, we reached the best performance with and *rbf* kernel with gamma and C. There **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we do not know for SVM. Had we more time and more ample data, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf).
+After Scaling the data, we reached the best performance with and *rbf* kernel with gamma and C. There **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we do not know for SVM. Had we more time and more ample data, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
 
 
 
