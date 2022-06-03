@@ -1,4 +1,4 @@
-<img src="Images/logo-round2.jpeg" style="zoom:5%;" />
+<img src="Images/logo-round2.jpeg" style="zoom:1.5%;" />
 
 
 # Yelp Restaurant Performance Prediction 
@@ -91,7 +91,7 @@ This is a layout of responsibilities per area that each member oversees:
 ---------------------------------------------------------------------------------------
 
 ## Data Source
-<img src="Images/black-and-white.png" style="zoom:1.5%;" />
+<img src="Images/black-and-white.png" style="zoom:0.5%;" />
 
 
 
@@ -244,7 +244,7 @@ All data CSV files were imported into Postgres according to Schemas that were cr
 
 ---------------------------------------------------------------------------------------
 
-## Machine Learning					<img src="Images/jupyter-pandas-python.jpeg" style="zoom:33%;" />
+## Machine Learning					<img src="Images/jupyter-pandas-python.jpeg" style="zoom:10%;" />
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
