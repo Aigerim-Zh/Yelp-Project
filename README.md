@@ -1,4 +1,4 @@
-# Yelp Restaurant Performance Prediction		<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/logo-round2.jpeg" style="zoom: 50%;" /> 
+# Yelp Restaurant Performance Prediction		<img src="Images/logo-round2.jpeg" style="zoom: 50%;" /> 
 
 
 
@@ -51,7 +51,6 @@ This is a layout of responsibilities per area that each member oversees:
 
 
 
-
 ---------------------------------------------------------------------------------------
 
 ## Questions We Hope to Answer
@@ -90,7 +89,7 @@ This is a layout of responsibilities per area that each member oversees:
 
 ---------------------------------------------------------------------------------------
 
-## <img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/black-and-white.png" style="zoom:50%;" />	Data Source
+## <img src="Images/black-and-white.png" style="zoom:50%;" />	Data Source
 
 
 
@@ -243,7 +242,7 @@ All data CSV files were imported into Postgres according to Schemas that were cr
 
 ---------------------------------------------------------------------------------------
 
-## Machine Learning					<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/jupyter-pandas-python.jpeg" style="zoom:50%;" />
+## Machine Learning					<img src="Images/jupyter-pandas-python.jpeg" style="zoom:50%;" />
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
@@ -301,7 +300,7 @@ Below are the four main stages in our machine learning development process. In e
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
-<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/feature_importance.png" style="zoom:67%;" />
+<img src="Images/feature_importance.png" style="zoom:67%;" />
 
 
 
@@ -313,7 +312,7 @@ We can also see a relatively high correlation among the Census population featur
 
 
 
-<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/correlation_matrix.png" style="zoom:67%;" />
+<img src="Images/correlation_matrix.png" style="zoom:67%;" />
 
 
 
@@ -330,7 +329,7 @@ After Scaling the data, we reached the best performance with and *rbf* kernel wi
 
 ## Dashboard
 
-<img src="/Users/anabisker/Desktop/Data_Analytics_Bootcamp/20-Final-Project/Yelp-Project/Images/tableau-logo.jpeg" style="zoom: 67%;" />
+<img src="Images/tableau-logo.jpeg" style="zoom: 67%;" />
 
 We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject/ByStateDashboard?publish=yes). 
 
