@@ -1,6 +1,6 @@
 # Yelp Restaurant Performance Prediction 
 
-<img src="Images/logo-round2.jpeg" style="zoom:5%;" />
+                              <img src="Images/logo-round2.jpeg" style="zoom:5%;" />
 
 
 
