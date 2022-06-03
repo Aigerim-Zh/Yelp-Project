@@ -1,8 +1,7 @@
+<img src="Images/logo-round2.jpeg" style="zoom:5%;" />
+
+
 # Yelp Restaurant Performance Prediction 
-
-                              <img src="Images/logo-round2.jpeg" style="zoom:5%;" />
-
-
 
 ## Project Abstract 
 
