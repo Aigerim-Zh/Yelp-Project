@@ -21,7 +21,7 @@ Testing a series of Machine Learning models, we hope to establish which one yiel
 
 ## Motivation 
 
-The COVID-19 pandemic has presented a multitude of constraints and economic downfalls, in which the restaurant industry has taken a big hit. Now, more than ever, restaurant owners can greatly benefit from the insights presented by what consumers currently value the most in the food industry — in order to best stand out from other local competitors. 
+The COVID-19 pandemic has presented a multitude of constraints and economic downfalls, in which the restaurant industry has taken a big hit. Now, more than ever, restaurant owners can greatly benefit from the insights presented by what consumers currently value the most in the food industry — to best stand out from other local competitors. 
 
 By accessing data on the top-rated attributes, restaurant owners and investors can learn how to best appeal to the public in such ever-changing times. Just as the nature of our social interactions has changed, so have current demands and trends. Therefore, it is of critical importance for business owners to remain well informed on the story the data tells to better understand social transitions. 
 
@@ -105,7 +105,7 @@ The data used in this project is [Yelp's businesses, reviews, and users subset d
 
 - There were 150,346 records in total, which were filtered to only restaurants. 
 
-- After filtering and cleaning, we have 27,137 records. There are 13 states that are covered by our analysis: AZ, CA, DE, FL, ID, IL, IN, LA, MO, NJ, NV, PA, and TN.
+- After filtering and cleaning, we have 27,137 records. 13 states are covered by our analysis: AZ, CA, DE, FL, ID, IL, IN, LA, MO, NJ, NV, PA, and TN.
 
   
 
@@ -320,7 +320,7 @@ During our machine learning stage, we examined features by three methods: variat
 
 The code is available [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/Feature_Selection.ipynb).
 
-### Variance of Continous Variable
+### Variance of Continuous Variable
 ![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/variance.png)
 
 Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
