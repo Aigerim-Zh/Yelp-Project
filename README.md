@@ -239,7 +239,23 @@ Census table - imported from census.gov in CSV format.
 All data CSV files were imported into Postgres according to Schemas that were created by queries.
 
 
+---------------------------------------------------------------------------------------
+## Exploratory Analysis 
 
+We conducted extensive exploratory analysis before going into machine learning. 
+
+The code available [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Exploratory_Analysis.ipynb).
+
+We examined the rating distribution and its relation with each restaurant attribute and income and population data from Census. Each relationship was examined through boxplots, scatterplots, and bar charts.
+
+- In most cases, the average restaurant ratings had minimal difference across the selected restaurant attributes.
+- Review Count control seems to be important. Restaurants that fall under 4 of 4.5 rating categories tend to have the largest number of reviews, on average.
+- The attributes that had the most difference in the mean star ratings are:
+  - Wheelchair Accessibility
+  - Noise Level
+  - Good for Kids 
+  - Good for Groups
+- Data from Census seems to show some difference across rating categories.
 ---------------------------------------------------------------------------------------
 
 ## Machine Learning         <img src="Images/jupyter-pandas-python.jpeg" style="zoom:10%;" />
