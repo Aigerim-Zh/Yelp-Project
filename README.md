@@ -238,6 +238,8 @@ Census table - imported from census.gov in CSV format.
 
 All data CSV files were imported into Postgres according to Schemas that were created by queries.
 
+
+
 ---------------------------------------------------------------------------------------
 
 ## Machine Learning         <img src="Images/jupyter-pandas-python.jpeg" style="zoom:10%;" />
@@ -270,7 +272,7 @@ We moved to classification models with a categorical target variable. Before arr
   - **Balanced Random Forest** 
   - **Easy Ensemble AdaBoost Classifier**
 
-### Steps to Arrive at the Best Peforming Model
+#### Steps to Arrive at the Best Performing Model
 ![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Verification_Steps_Summary.png)
 
 First, we classified the ratings into **four** classes: poor, average, good, and successful. 
@@ -287,7 +289,7 @@ We compared each model based on its overall accuracy score and an F-1 score for 
 
 Since the first stage, a series of verification tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
-### Steps that Did Not Improve the Strongest Model Further
+#### Steps that Did Not Improve the Strongest Model Further
 - Scaling data and running all models again.
 - Testing further with the **Support Vector Machine** model [see here](https://github.com/Aigerim-Zh/Yelp-Project#segment-three-1).
 
@@ -297,20 +299,30 @@ You can find **more details** on our Machine Learning model development process 
 
 **_NOTE_**: all experimental stages of the Machine Learning process were conducted using CSV files. The CSV data for the final model had **24,739 observations** and yielded **66.85% accuracy**. However, some of the observations had damaged address entries and had to be dropped during the Database Creation stage. Therefore, the final file connecting to the database now only uses **24,681 observations**, which dropped the accuracy to **66.68%**. This incident might indicate that having more observations could give us more accuracy.  
 
-### Feature Importance
+## Feature Selection 
+During our machine learning stage, we examined features by three methods: variation, correlation, and importance rank. Each method provides different criteria for selecting a feature. In the end, it is a researcher's judgment call. For us, these methods helped to choose the Median Income feature over the Mean Income.
 
-Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
+The code is available [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/Feature_Selection.ipynb).
 
-<img src="Images/feature_importance.png" style="zoom:50%;" />
+### Variance of Continous Variable
+![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/variance.png)
 
-### Correlation Matrix
+Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
 
-Before running our models, we examined the correlation among all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. 
+### Correlation 
 
-We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
+![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/correlation_barchart.png)
+
+Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
 
 <img src="Images/correlation_matrix.png" style="zoom:50%;" />
 
+We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
+
+### Feature Importance 
+![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/importance.png)
+
+Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
 ### Segment Three
 
