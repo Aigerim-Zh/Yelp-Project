@@ -259,8 +259,6 @@ Going forward, we intended to test our analysis and metrics using our real data 
 
 ### Segment Two
 
-#### Summary of Findings
-
 Subsequent to the submission of Segment One, we input our actual data into the Linear Regression model. Doing that, we observed that the R^2 of this model was no higher than 0.14. The code for this stage of Machine Learning testing can be found [here](Regression_ML_model.ipynb).
 
 After inspecting the data more closely, we found that the target variable of 'stars ratings' follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
@@ -272,6 +270,7 @@ We moved to classification models with a categorical target variable. Before arr
   - **Balanced Random Forest** 
   - **Easy Ensemble AdaBoost Classifier**
 
+### Steps to Arrive at the Best Peforming Model
 ![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Verification_Steps_Summary.png)
 
 First, we classified the ratings into **four** classes: poor, average, good, and successful. 
@@ -288,7 +287,11 @@ We compared each model based on its overall accuracy score and an F-1 score for 
 
 Since the first stage, a series of verification tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
-You can find more details on our Machine Learning model development process here:
+### Steps that Did Not Improve the Strongest Model Further
+- Scaling data and running all models again.
+- Testing further with the **Support Vector Machine** model [see here](https://github.com/Aigerim-Zh/Yelp-Project#segment-three-1).
+
+You can find **more details** on our Machine Learning model development process here:
   - [Here](Stages.md) you can read a detailed description of every classification model and method we tested, and their comparisons. 
   - All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/main/Machine_Learning_Models). 
 
@@ -296,14 +299,9 @@ You can find more details on our Machine Learning model development process here
 
 ### Feature Importance
 
-
-
-
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart below, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
 <img src="Images/feature_importance.png" style="zoom:50%;" />
-
-
 
 ### Correlation Matrix
 
@@ -311,20 +309,12 @@ Before running our models, we examined the correlation among all features and ra
 
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
 
-
-
 <img src="Images/correlation_matrix.png" style="zoom:50%;" />
-
 
 
 ### Segment Three
 
 We did research and tested various _Support Vector Machine_ or **SVM** machine learning methods. After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we had more time and a larger number of observations, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
-
-
-
-
-
 
 -----------------------------------------------------------------------------------------
 
