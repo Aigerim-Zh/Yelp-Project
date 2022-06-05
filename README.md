@@ -336,6 +336,9 @@ The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
 
 
 
+
+
+
 ## Feature Selection 
 
 During our machine learning stage, we examined features by three methods: variation, correlation, and importance rank. Each method provides different criteria for selecting a feature. In the end, it is a researcher's judgment call. For us, these methods helped to choose the Median Income feature over the Mean Income.
