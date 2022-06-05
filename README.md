@@ -305,10 +305,6 @@ We compared each model based on its overall accuracy score and an F-1 score for 
 
 Since the first stage, a series of verification tests lead us to **over a 20% accuracy increase** in the strongest model. 
 
-#### Steps that Did Not Improve the Strongest Model Further
-- Scaling data and running all models again.
-- Testing further with the **Support Vector Machine** model [see here](https://github.com/Aigerim-Zh/Yelp-Project#segment-three-1).
-
 You can find **more details** on our Machine Learning model development process here:
   - [Here](Stages.md) you can read a detailed description of every classification model and method we tested, and their comparisons. 
   - All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/main/Machine_Learning_Models). 
@@ -342,7 +338,17 @@ Although the Balanced Random Forest produced overfitting results in the majority
 
 ### Segment Three
 
-We did research and tested various _Support Vector Machine_ or **SVM** machine learning methods. After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we had more time and a larger number of observations, this model may have been a promising prospect. The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
+The following steps did not improve the strongest model further:
+
+- Scaling data and running all models again.
+- Testing further with the **Support Vector Machine** model:
+
+We did research and tested various _Support Vector Machine_ or **SVM** machine learning methods. After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. 
+
+There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we had more time and a larger number of observations, this model may have been a promising prospect. 
+
+The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
+
 
 -----------------------------------------------------------------------------------------
 
