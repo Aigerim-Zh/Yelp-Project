@@ -91,7 +91,7 @@ This is a layout of responsibilities per area that each member oversees:
 ---------------------------------------------------------------------------------------
 
 ## Data Source
-<img src="Images/black-and-white.png" width="20%" height="20%" >
+<img src="Images/black-and-white.png" width="10%" height="10%" >
 
 
 
@@ -133,7 +133,7 @@ As part of this project, we have developed a database in **PostgreSQL** using **
 
 The ERD below demonstrates how each table is related to each other and specifies a data type for each column.
 
-<img src="Images/ERD_Final.png" style="zoom:10%;" />
+<img src="Images/ERD_Final.png" width="60%" height="60%" >
 
 - The Census Data table has a one-to-many connection to the Business table through the Postal_Code column.
 
@@ -180,19 +180,19 @@ Below are screenshots of our **SQL database** per table:
 
 #### Business
 
-<img src="Images/Business_SQL_screenshot.png" width="20%" height="20%" >
+<img src="Images/Business_SQL_screenshot.png" width="60%" height="60%" >
 
 
 
 #### Census Data
 
-<img src="Images/Census_data_SQL_screenshot.png"  width="20%" height="20%" >
+<img src="Images/Census_data_SQL_screenshot.png"  width="60%" height="60%" >
 
 
 
 #### Merged Data
 
-<img src="Images/Merged_data_SQL_screenshot.png"  width="20%" height="20%" >
+<img src="Images/Merged_data_SQL_screenshot.png"  width="60%" height="60%" >
 
 
 
@@ -259,7 +259,7 @@ We examined the rating distribution and its relation with each restaurant attrib
 - Data from Census seems to show some difference across rating categories.
 ---------------------------------------------------------------------------------------
 
-## Machine Learning         <img src="Images/jupyter-pandas-python.jpeg"  width="20%" height="20%" >
+## Machine Learning         <img src="Images/jupyter-pandas-python.jpeg"  width="50%" height="50%" >
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
@@ -295,7 +295,7 @@ We moved to classification models with a categorical target variable. Before arr
 **Steps to Arrive at the Best Performing Model:**
 
 
-<img src="Verification_Steps_Summary.png"  width="20%" height="20%" >
+<img src="Verification_Steps_Summary.png"  width="60%" height="60%" >
 
 
 
@@ -331,7 +331,7 @@ The code is available [here](Feature_Selection/Feature_Selection.ipynb).
 
 ### Variance of Continuous Variable
 
-<img src="Feature_Selection/variance.png"  width="20%" height="20%" >
+<img src="Feature_Selection/variance.png"  width="60%" height="60%" >
 
 
 Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
@@ -340,13 +340,13 @@ Higher variance means more heterogeneous data. Potentially, features that have m
 ### Correlation 
 
 
-<img src="Feature_Selection/correlation_barchart.png"  width="20%" height="20%" >
+<img src="Feature_Selection/correlation_barchart.png"  width="60%" height="60%" >
 
 
 Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
 
 
-<img src="Images/correlation_matrix.png"  width="20%" height="20%" >
+<img src="Images/correlation_matrix.png"  width="60%" height="60%" >
 
 
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
@@ -355,7 +355,7 @@ We can also see a relatively high correlation among the Census population featur
 
 ### Feature Importance 
 
-<img src="Images/feature_importance2.png"  width="20%" height="20%" >
+<img src="Images/feature_importance2.png"  width="60%" height="60%" >
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
@@ -382,14 +382,14 @@ The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
 
 ## Dashboard
 
-<img src="Images/tableau-logo.jpeg"  width="50%" height="50%" >
+<img src="Images/tableau-logo.jpeg"  width="20%" height="20%" >
 
 We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject/ByStateDashboard?publish=yes). 
 
 Screenshot below:
 
 
-<img src="Images/tableau-screenshot2.png"  width="50%" height="50%" >
+<img src="Images/tableau-screenshot2.png"  width="60%" height="60%" >
 
 
 
@@ -410,7 +410,7 @@ Google Slides will be for our live presentation. The draft of our presentation s
 Screenshot of the initial screen of our presentation below:
 
 
-<img src="Images/Slide-screenshot2.png"  width="50%" height="50%" >
+<img src="Images/Slide-screenshot2.png"  width="60%" height="60%" >
 
 
 
