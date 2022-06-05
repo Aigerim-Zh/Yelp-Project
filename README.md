@@ -317,7 +317,11 @@ You can find **more details** on our Machine Learning model development process 
   - [Here](Stages.md) you can read a detailed description of every classification model and method we tested, and their comparisons. 
   - All the code for classification models is saved [here](Machine_Learning_Models). 
 
-**_NOTE_**: all experimental stages of the Machine Learning process were conducted using CSV files. The CSV data for the final model had **24,739 observations** and yielded **66.85% accuracy**. However, some of the observations had damaged address entries and had to be dropped during the Database Creation stage. Therefore, the final file connecting to the database now only uses **24,681 observations**, which dropped the accuracy to **66.68%**. This incident might indicate that having more observations could give us more accuracy.  
+**To note**: Initial experimental stages of the Machine Learning process were conducted using tables that were merged using Pandas and read directly from CSV files. The data for the final model had **24,739 observations** and yielded **66.85% accuracy**. 
+
+Subsequently, some of the observations had damaged address entries and had to be dropped during the SQL table merge in the **Database Creation** stage.
+
+The final model that connects to the SQL database and table merged there now only uses **24,681 observations**, which dropped the accuracy to **66.68%**. This incident might indicate that having more observations could give us more accuracy.  
 
 
 
