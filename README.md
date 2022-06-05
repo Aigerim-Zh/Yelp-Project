@@ -355,7 +355,7 @@ We can also see a relatively high correlation among the Census population featur
 
 ### Feature Importance 
 
-<img src="Feature_Selection/importance.png" style="zoom:10%;" />
+<img src="Images/feature_importance2.png" style="zoom:10%;" />
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
