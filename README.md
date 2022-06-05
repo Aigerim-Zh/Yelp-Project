@@ -133,7 +133,7 @@ As part of this project, we have developed a database in **PostgreSQL** using **
 
 The ERD below demonstrates how each table is related to each other and specifies a data type for each column.
 
-![image](Images/ERD_Final.png)
+<img src="Images/ERD_Final.png" style="zoom:10%;" />
 
 - The Census Data table has a one-to-many connection to the Business table through the Postal_Code column.
 
@@ -180,18 +180,19 @@ Below are screenshots of our **SQL database** per table:
 
 #### Business
 
-![image](Images/Business_SQL_screenshot.png)
+<img src="Images/Business_SQL_screenshot" style="zoom:10%;" />
+
 
 
 #### Census Data
 
-![image](Images/Census_data_SQL_screenshot.png)
+<img src="Images/Census_data_SQL_screenshot" style="zoom:10%;" />
 
 
 
 #### Merged Data
 
-![image](Images/Merged_data_SQL_screenshot.png)
+<img src="Images/Merged_data_SQL_screenshot.png" style="zoom:10%;" />
 
 
 
@@ -258,7 +259,7 @@ We examined the rating distribution and its relation with each restaurant attrib
 - Data from Census seems to show some difference across rating categories.
 ---------------------------------------------------------------------------------------
 
-## Machine Learning         <img src="Images/jupyter-pandas-python.jpeg" style="zoom:10%;" />
+## Machine Learning         <img src="Images/jupyter-pandas-python.jpeg" style="zoom:3%;" />
 
 In this section, we will describe our progress in Machine Learning model implementation. We have fundamentally decided to use **Supervised Machine Learning** methods. We measured success through **Ratings** (from 1 to 5 stars), as our target variable.
 
@@ -281,12 +282,14 @@ Subsequent to the submission of Segment One, we input our actual data into the L
 
 After inspecting the data more closely, we found that the target variable of 'stars ratings' follows a discrete distribution with only 9 unique values. That fact alone eliminated the prospect of keeping the Linear Regression model, which requires the target variable to be continuous values.
 
+
 ### Classification Models and Methods
 
 We moved to classification models with a categorical target variable. Before arriving at our strongest-performing model, we went through a series of due diligence stages. In each stage, we tested the following models:
   - **MultiClass Classification Logistic Regression** and its **Resampling Techniques** to address the classes imbalance
   - **Balanced Random Forest** 
   - **Easy Ensemble AdaBoost Classifier**
+  
 
 #### Steps to Arrive at the Best Performing Model
 
@@ -308,32 +311,38 @@ Since the first stage, a series of verification tests lead us to **over a 20% ac
 
 You can find **more details** on our Machine Learning model development process here:
   - [Here](Stages.md) you can read a detailed description of every classification model and method we tested, and their comparisons. 
-  - All the code for classification models is saved [here](https://github.com/Aigerim-Zh/Yelp-Project/tree/main/Machine_Learning_Models). 
+  - All the code for classification models is saved [here](Machine_Learning_Models). 
 
 **_NOTE_**: all experimental stages of the Machine Learning process were conducted using CSV files. The CSV data for the final model had **24,739 observations** and yielded **66.85% accuracy**. However, some of the observations had damaged address entries and had to be dropped during the Database Creation stage. Therefore, the final file connecting to the database now only uses **24,681 observations**, which dropped the accuracy to **66.68%**. This incident might indicate that having more observations could give us more accuracy.  
+
+
 
 ## Feature Selection 
 During our machine learning stage, we examined features by three methods: variation, correlation, and importance rank. Each method provides different criteria for selecting a feature. In the end, it is a researcher's judgment call. For us, these methods helped to choose the Median Income feature over the Mean Income.
 
-The code is available [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/Feature_Selection.ipynb).
+The code is available [here](Feature_Selection/Feature_Selection.ipynb).
+
 
 ### Variance of Continuous Variable
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/variance.png)
+
+<img src="Feature_Selection/variance.png" style="zoom:10%;" />
+
 
 Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
 
 ### Correlation 
 
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/correlation_barchart.png)
+<img src="Feature_Selection/correlation_barchart.png" style="zoom:10%;" />
 
 Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
 
-<img src="Images/correlation_matrix.png" style="zoom:50%;" />
+<img src="Images/correlation_matrix.png" style="zoom:10%;" />
 
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
 
 ### Feature Importance 
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Feature_Selection/importance.png)
+
+<img src="Feature_Selection/importance.png" style="zoom:10%;" />
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
