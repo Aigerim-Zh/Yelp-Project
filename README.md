@@ -1,4 +1,4 @@
-<img src="Images/logo-round2.jpeg" style="zoom:1.5%;" />
+<img src="Images/logo-round2.jpeg"  width="100" height="100";" />
 
 
 # Yelp Restaurant Performance Prediction 
