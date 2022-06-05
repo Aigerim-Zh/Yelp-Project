@@ -180,13 +180,13 @@ Below are screenshots of our **SQL database** per table:
 
 #### Business
 
-<img src="Images/Business_SQL_screenshot" style="zoom:10%;" />
+<img src="Images/Business_SQL_screenshot.png" style="zoom:10%;" />
 
 
 
 #### Census Data
 
-<img src="Images/Census_data_SQL_screenshot" style="zoom:10%;" />
+<img src="Images/Census_data_SQL_screenshot.png" style="zoom:10%;" />
 
 
 
@@ -286,14 +286,18 @@ After inspecting the data more closely, we found that the target variable of 'st
 ### Classification Models and Methods
 
 We moved to classification models with a categorical target variable. Before arriving at our strongest-performing model, we went through a series of due diligence stages. In each stage, we tested the following models:
+
   - **MultiClass Classification Logistic Regression** and its **Resampling Techniques** to address the classes imbalance
   - **Balanced Random Forest** 
   - **Easy Ensemble AdaBoost Classifier**
   
 
-#### Steps to Arrive at the Best Performing Model
+**Steps to Arrive at the Best Performing Model:**
+
 
 <img src="Verification_Steps_Summary.png" style="zoom:10%;" />
+
+
 
 First, we classified the ratings into **four** classes: poor, average, good, and successful. 
   - We started with 10 features and added 5 more restaurant features, which increased the accuracy. 
@@ -318,9 +322,11 @@ You can find **more details** on our Machine Learning model development process 
 
 
 ## Feature Selection 
+
 During our machine learning stage, we examined features by three methods: variation, correlation, and importance rank. Each method provides different criteria for selecting a feature. In the end, it is a researcher's judgment call. For us, these methods helped to choose the Median Income feature over the Mean Income.
 
 The code is available [here](Feature_Selection/Feature_Selection.ipynb).
+
 
 
 ### Variance of Continuous Variable
@@ -330,21 +336,30 @@ The code is available [here](Feature_Selection/Feature_Selection.ipynb).
 
 Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
 
+
 ### Correlation 
+
 
 <img src="Feature_Selection/correlation_barchart.png" style="zoom:10%;" />
 
+
 Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
+
 
 <img src="Images/correlation_matrix.png" style="zoom:10%;" />
 
+
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
+
+
 
 ### Feature Importance 
 
 <img src="Feature_Selection/importance.png" style="zoom:10%;" />
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
+
+
 
 ### Segment Three
 
@@ -358,6 +373,9 @@ We did research and tested various _Support Vector Machine_ or **SVM** machine l
 There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we had more time and a larger number of observations, this model may have been a promising prospect. 
 
 The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
+
+
+
 
 
 -----------------------------------------------------------------------------------------
