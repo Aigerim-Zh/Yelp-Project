@@ -133,7 +133,7 @@ As part of this project, we have developed a database in **PostgreSQL** using **
 
 The ERD below demonstrates how each table is related to each other and specifies a data type for each column.
 
-<img src="Images/ERD_Final.png" width="100%" height="90%" >
+<img src="Images/ERD_Final.png" width="90%" height="80%" >
 
 - The Census Data table has a one-to-many connection to the Business table through the Postal_Code column.
 
@@ -180,19 +180,19 @@ Below are screenshots of our **SQL database** per table:
 
 #### Business
 
-<img src="Images/Business_SQL_screenshot.png" width="100%" height="90%" >
+<img src="Images/Business_SQL_screenshot.png" width="90%" height="80%" >
 
 
 
 #### Census Data
 
-<img src="Images/Census_data_SQL_screenshot.png"  width="100%" height="90%" >
+<img src="Images/Census_data_SQL_screenshot.png"  width="90%" height="80%" >
 
 
 
 #### Merged Data
 
-<img src="Images/Merged_data_SQL_screenshot.png"  width="100%" height="90%" >
+<img src="Images/Merged_data_SQL_screenshot.png"  width="90%" height="80%" >
 
 
 
@@ -331,7 +331,7 @@ The code is available [here](Feature_Selection/Feature_Selection.ipynb).
 
 ### Variance of Continuous Variable
 
-<img src="Feature_Selection/variance.png" width="85%" height="75%" >
+<img src="Feature_Selection/variance.png" width="75%" height="65%" >
 
 
 Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
@@ -340,13 +340,13 @@ Higher variance means more heterogeneous data. Potentially, features that have m
 ### Correlation 
 
 
-<img src="Feature_Selection/correlation_barchart.png"  width="85%" height="75%" >
+<img src="Feature_Selection/correlation_barchart.png"  width="75%" height="65%" >
 
 
 Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
 
 
-<img src="Images/correlation_matrix.png"  width="85%" height="75%" >
+<img src="Images/correlation_matrix.png"  width="75%" height="65%" >
 
 
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
@@ -355,7 +355,7 @@ We can also see a relatively high correlation among the Census population featur
 
 ### Feature Importance 
 
-<img src="Images/feature_importance2.png"  width="85%" height="75%" >
+<img src="Images/feature_importance2.png"  width="75%" height="65%" >
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
