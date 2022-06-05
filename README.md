@@ -388,7 +388,7 @@ The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
 
 <img src="Images/tableau-logo.jpeg"  width="20%" height="20%" >
 
-We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject/ByStateDashboard?publish=yes). 
+We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject2/1FullMapView?publish=yes). 
 
 Screenshot below:
 
