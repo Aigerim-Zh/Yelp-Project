@@ -321,6 +321,19 @@ Subsequently, some of the observations had damaged address entries and had to be
 
 The final model that connects to the SQL database and table merged there now only uses **24,681 observations**, which dropped the accuracy to **66.68%**. This incident might indicate that having more observations could give us more accuracy.  
 
+### Segment Three
+
+The following steps did not improve the strongest model further:
+
+- Scaling data and running all models again.
+- Testing further with the **Support Vector Machine** model:
+
+We did research and tested various _Support Vector Machine_ or **SVM** machine learning methods. After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. 
+
+There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we had more time and a larger number of observations, this model may have been a promising prospect. 
+
+The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
+
 
 
 ## Feature Selection 
@@ -360,22 +373,6 @@ We can also see a relatively high correlation among the Census population featur
 <img src="Images/feature_importance2.png"  width="85%" height="75%" >
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
-
-
-
-### Segment Three
-
-The following steps did not improve the strongest model further:
-
-- Scaling data and running all models again.
-- Testing further with the **Support Vector Machine** model:
-
-We did research and tested various _Support Vector Machine_ or **SVM** machine learning methods. After scaling the data with _StandardScaler()_, we reached the best performance with *rbf* kernel, random_state=1, gamma=0.05, C=0.01. 
-
-There was **zero** overfitting but the accuracy was still much lower than the AdaBoost Ensemble classifier. We acknowledged that there may be parameters we are not yet familiar with in **SVM**. Had we had more time and a larger number of observations, this model may have been a promising prospect. 
-
-The code can be seen [here](svm_model_stnd_scaler_rbf.ipynb).
-
 
 
 
