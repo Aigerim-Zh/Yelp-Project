@@ -348,7 +348,7 @@ Higher variance means more heterogeneous data. Potentially, features that have m
 Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
 
 
-<img src="Images/correlation_matrix.png"  width="75%" height="65%" >
+<img src="Images/correlation_matrix.png"  width="85%" height="75%" >
 
 
 We can also see a relatively high correlation among the Census population features of the Total Households Per Zip, Total Married Households Per Zip, and Total Non-Family Households Per Zip. This observation is expected as all these values are representative of the population. However, leaving only one population proxy did not affect the models. 
