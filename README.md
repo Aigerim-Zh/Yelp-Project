@@ -342,7 +342,7 @@ Higher variance means more heterogeneous data. Potentially, features that have m
 ### Correlation 
 
 
-<img src="Feature_Selection/correlation_barchart.png"  width="75%" height="65%" >
+<img src="Feature_Selection/correlation_barchart.png"  width="85%" height="75%" >
 
 
 Before running our models, we examined the correlation between all features and ratings. As it can be seen, most of the features do not have a very strong correlation with the ratings. Nevertheless, these features constitute an important part of the restaurant's performance as shown by the Machine Learning models. The variable with the highest correlation is WheelChair Accessibility.
@@ -357,7 +357,7 @@ We can also see a relatively high correlation among the Census population featur
 
 ### Feature Importance 
 
-<img src="Images/feature_importance2.png"  width="95%" height="85%" >
+<img src="Images/feature_importance2.png"  width="85%" height="75%" >
 
 Although the Balanced Random Forest produced overfitting results in the majority of settings, its feature importance calculator is useful. In the chart above, all features are ranked according to their importance. Although we tried removing less important features, the accuracy score dropped slightly, i.e., all less important features collectively make a meaningful contribution to the model.
 
