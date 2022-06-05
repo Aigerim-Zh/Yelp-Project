@@ -333,7 +333,7 @@ The code is available [here](Feature_Selection/Feature_Selection.ipynb).
 
 ### Variance of Continuous Variable
 
-<img src="Feature_Selection/variance.png" width="75%" height="65%" >
+<img src="Feature_Selection/variance.png" width="85%" height="75%" >
 
 
 Higher variance means more heterogeneous data. Potentially, features that have more variability add more representativeness to the dataset.
