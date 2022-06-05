@@ -140,8 +140,3 @@ Adding the State feature slightly improved the performance of **the strongest mo
 
 We tried scaling data using a StandardScaler(). As expected, the results almost stayed the same as the models are not sensitive to scaling.
 
-
-
-### Using SQL Data
-
-As the last step, instead of using our initial in-place CSV-read of data from Business and Census CSV files merged in Pandas, directly from the merged CSV file, we created an engine with SQLAlchemy and used our data merged on the relational database interface using queries. On this phase of data-processing, due to incongruent address formatting, our number of observations went down from 24,739 to 24,681, and the **final performance** of our strongest model came down to **66.68%**. 
