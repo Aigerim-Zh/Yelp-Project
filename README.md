@@ -244,7 +244,7 @@ All data CSV files were imported into Postgres according to Schemas that were cr
 
 We conducted extensive exploratory analysis before going into machine learning. 
 
-The code available [here](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Exploratory_Analysis.ipynb).
+The code available [here](Exploratory_Analysis.ipynb).
 
 We examined the rating distribution and its relation with each restaurant attribute and income and population data from Census. Each relationship was examined through boxplots, scatterplots, and bar charts.
 
