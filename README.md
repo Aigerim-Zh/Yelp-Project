@@ -93,8 +93,6 @@ This is a layout of responsibilities per area that each member oversees:
 
 <img src="Images/black-and-white.png" width="10%" height="10%" >
 
-
-
 ### Yelp Data
 
 The data used in this project is [Yelp's businesses, reviews, and users subset data](https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset?datasetId=10100&language=Python&outputs=null) extracted from Kaggle.
