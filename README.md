@@ -289,7 +289,8 @@ We moved to classification models with a categorical target variable. Before arr
   - **Easy Ensemble AdaBoost Classifier**
 
 #### Steps to Arrive at the Best Performing Model
-![](https://github.com/Aigerim-Zh/Yelp-Project/blob/main/Verification_Steps_Summary.png)
+
+<img src="Verification_Steps_Summary.png" style="zoom:10%;" />
 
 First, we classified the ratings into **four** classes: poor, average, good, and successful. 
   - We started with 10 features and added 5 more restaurant features, which increased the accuracy. 
