@@ -1,4 +1,4 @@
-<img src="Images/logo-round2.jpeg"  width="20%" height="20%">
+<img src="Images/logo-round2.jpeg"  width="10%" height="10%">
 
 
 # Yelp Restaurant Performance Prediction 
@@ -91,7 +91,7 @@ This is a layout of responsibilities per area that each member oversees:
 ---------------------------------------------------------------------------------------
 
 ## Data Source
-<img src="Images/black-and-white.png" style="zoom:0.5%;" />
+<img src="Images/black-and-white.png" width="20%" height="20%>
 
 
 
