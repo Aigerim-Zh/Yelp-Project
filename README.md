@@ -89,7 +89,7 @@ This is a layout of responsibilities per area that each member oversees:
 
 
 ---------------------------------------------------------------------------------------
-<img src="Images/black-and-white.png" width="10%" height="10%" >
+<img src="Images/black-and-white.png" width="5%" height="5%" >
 
 ## Data Source 
 
