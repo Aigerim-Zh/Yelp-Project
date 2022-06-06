@@ -441,6 +441,6 @@ Screenshot of the initial screen of our presentation below:
 
 ## Areas for Improvement 
 
-Capture even more recent data to have a wider scope, and keep track of trends year-by-year and oscillations due to behavioral shifts stemming from the pandemic, and society's transition out of isolation.
+- Capture even more recent data to have a wider scope, and keep track of trends year-by-year and oscillations due to behavioral shifts stemming from the pandemic, and society's transition out of isolation.
 
-With more time and additional data points we could have gone further into exploration of a more effective predictive machine learning model.
+- With more time and additional data points we could have gone further into exploration of a more effective predictive machine learning model.
