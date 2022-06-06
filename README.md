@@ -386,16 +386,12 @@ Although the Balanced Random Forest produced overfitting results in the majority
 
 <img src="Images/tableau-logo.jpeg"  width="20%" height="20%" >
 
-We used **Tableau** to create and host our dashboard.  We made a blueprint Tableau dashboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject2/WinningWithYelp?publish=yes). 
+We used **Tableau** to create and host our dashboard.  We made a Tableau storyboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject2/WinningWithYelp?publish=yes). 
 
 Screenshot below:
 
 
 <img src="Images/tableau-storyboard.png"  width="100%" height="90%" >
-
-
-
-We may explore using an interactive Javascript interface to demonstrate our model if we have time.
 
 
 
@@ -405,14 +401,14 @@ We may explore using an interactive Javascript interface to demonstrate our mode
 
 ## Project Presentation 
 
-Google Slides will be for our live presentation. The draft of our presentation slides can be seen [here](https://docs.google.com/presentation/d/18GWN6LmhtkoVwcq43I3RUQ_keQdY6Q2PWb0nEIa3FOg/edit?usp=sharing).
+Google Slides will be used for our live presentation. Our slideshow can be viewed [here](https://docs.google.com/presentation/d/18GWN6LmhtkoVwcq43I3RUQ_keQdY6Q2PWb0nEIa3FOg/edit?usp=sharing).
 
 
 
-Screenshot of the initial screen of our presentation below:
+Screenshot of our slide structure below:
 
 
-<img src="Images/slides-new.png"  width="100%" height="90%" >
+<img src="Images/slides-new2.png"  width="100%" height="90%" >
 
 
 
