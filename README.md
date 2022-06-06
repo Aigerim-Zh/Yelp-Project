@@ -412,7 +412,7 @@ Google Slides will be for our live presentation. The draft of our presentation s
 Screenshot of the initial screen of our presentation below:
 
 
-<img src="Images/Slide-screenshot2.png"  width="100%" height="90%" >
+<img src="Images/slides-new.png"  width="100%" height="90%" >
 
 
 
