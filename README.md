@@ -391,7 +391,7 @@ We used **Tableau** to create and host our dashboard.  We made a blueprint Table
 Screenshot below:
 
 
-<img src="Images/tableau-screenshot2.png"  width="100%" height="90%" >
+<img src="Images/tableau-storyboard.png"  width="100%" height="90%" >
 
 
 
