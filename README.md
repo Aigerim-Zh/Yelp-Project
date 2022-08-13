@@ -386,7 +386,7 @@ Although the Balanced Random Forest produced overfitting results in the majority
 
 <img src="Images/tableau-logo.jpeg"  width="20%" height="20%" >
 
-We used **Tableau** to create and host our dashboard.  We made a Tableau storyboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject2/WinningWithYelp?publish=yes). 
+We used **Tableau** to create and host our dashboard.  We made a Tableau storyboard that can be seen [here](). 
 
 Screenshot below:
 
@@ -422,7 +422,7 @@ Screenshot of our slide structure below:
 
 - Sentiment Analysis on Reviews
   - The unexplained part of the model may come from other features that might be restaurant-specific such as cleanliness, menu and food attributes, service attributes such as the number of servers, politeness of staff, etc.
-  - However, these data are not available in Yelp attributes but can be extracted based on keywords from review comments. In general, review comments analysis might reveal other factors determining success in the restaurant industry.
+  - However, these data are not available in Yelp attributes but can be extracted based on keywords from review comments. In general, review comments analysis might reveal other factors determining success in the restaurant industry and would be pursued if there was more time to put together this project.
 
 
 - A deeper study into User Yelp profiles
