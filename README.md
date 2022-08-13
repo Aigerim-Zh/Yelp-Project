@@ -386,7 +386,7 @@ Although the Balanced Random Forest produced overfitting results in the majority
 
 <img src="Images/tableau-logo.jpeg"  width="20%" height="20%" >
 
-We used **Tableau** to create and host our dashboard.  We made a Tableau storyboard that can be seen [here](). 
+We used **Tableau** to create and host our dashboard.  We made a Tableau storyboard that can be seen [here](https://public.tableau.com/app/profile/ana.bisker/viz/YelpFinalProject2/WinningWithYelp?publish=yes). 
 
 Screenshot below:
 
